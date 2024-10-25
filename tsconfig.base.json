@@ -8,13 +8,18 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "strictPropertyInitialization": false,
     "target": "es2015",
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rline/common": ["libs/common/src/index.ts"],
+      "@rline/core": ["libs/core/src/index.ts"],
+      "@rline/database": ["libs/database/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
