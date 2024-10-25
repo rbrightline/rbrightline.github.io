@@ -1,4 +1,3 @@
-import { output } from '@angular/core';
 import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
@@ -8,8 +7,6 @@ const config: StorybookConfig = {
     name: '@storybook/angular',
     options: {},
   },
-  staticDirs: ['../../../docs/material'],
-  swc: { output: '../../../docs/material' },
 };
 
 export default config;
