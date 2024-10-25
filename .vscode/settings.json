@@ -1,0 +1,12 @@
+{
+  "yaml.schemas": {
+    ".schemas/model.schema.json": [
+      "projects/**/*.model.yaml",
+      "projects/**/*.model.json"
+    ],
+    ".schemas/project.schema.json": [
+      "projects/**/*.project.yaml",
+      "projects/**/*.project.json"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Model",
+  "properties": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "propertyNames": {
+          "$ref": "./enums/model-name.schema.json"
+        }
+      }
+    }
+  },
+  "required": ["name"]
+}
