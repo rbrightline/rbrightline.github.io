@@ -1,2 +1,6 @@
+name: ath
+title: Authentication And Authrorization Service
+description: Authentication And Authrorization Service
 urls:
-  - https://www.domain.com/api/v1
+  prod: https://localhost:3011/api
+  dev: https://localhost:3012/api
