@@ -31,9 +31,6 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
-    },
-    "build-storybook": {
-      "outputs": ["{workspaceRoot}/docs/material"]
     }
   }
 }
