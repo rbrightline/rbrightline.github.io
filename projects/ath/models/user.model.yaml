@@ -1,0 +1,6 @@
+name: User
+properties:
+  name:
+    type: object
+    anyOf:
+      - $ref: "#/"
