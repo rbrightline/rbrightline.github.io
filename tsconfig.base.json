@@ -16,9 +16,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@rline/cdk": ["libs/cdk/src/index.ts"],
       "@rline/common": ["libs/common/src/index.ts"],
       "@rline/core": ["libs/core/src/index.ts"],
-      "@rline/database": ["libs/database/src/index.ts"]
+      "@rline/database": ["libs/database/src/index.ts"],
+      "@rline/material": ["libs/material/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
