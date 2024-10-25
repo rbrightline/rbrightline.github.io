@@ -44,6 +44,11 @@
     },
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
+    },
+    "@angular-devkit/build-angular:browser": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
@@ -65,10 +70,13 @@
       "e2eTestRunner": "playwright",
       "linter": "eslint",
       "style": "scss",
-      "addTailwind":true, 
-      "unitTestRunner": "jest", 
-      "inlineTemplate":true, 
-      "inlineStyle":true
+      "unitTestRunner": "jest",
+      "bundler": "webpack",
+      "addTailwind": true,
+      "inlineTemplate": true,
+      "inlineStyle": true,
+      "minimal": true,
+      "ssr": false
     }
   }
 }
