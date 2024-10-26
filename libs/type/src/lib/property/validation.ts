@@ -46,6 +46,7 @@ export type ValidationPropertyOptions = {
   validateIf: (obje: any, value: any) => boolean;
 
   /**
+   * @deprecated
    * When set, the property is validated only if the group is provided
    */
   groups: string[];

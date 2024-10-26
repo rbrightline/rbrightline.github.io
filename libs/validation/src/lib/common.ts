@@ -1,5 +1,6 @@
 import { PropertyOptions } from '@rline/type';
 import {
+  IsArray,
   IsNotEmpty,
   IsOptional,
   ValidateIf,
@@ -30,7 +31,6 @@ export function CommonValidation(
     }
 
     if (options.isString) {
-
     }
   };
 }
