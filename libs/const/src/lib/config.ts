@@ -22,6 +22,13 @@ export enum FileSystemConfigKeys {
   EMAIL_TEMPLATES_DIR = 'EMAIL_TEMPLATES_DIR',
 }
 
+export enum EmailConfigKeys {
+  EMAIL_HOST = 'EMAIL_HOST',
+  EMAIL_DOMAIN = 'EMAIL_DOMAIN',
+  EMAIL = 'EMAIL',
+  EMAIL_PASSWORD = 'EMAIL_PASSWORD',
+}
+
 /**
  * Convert the regular configuraiton key into prefixed-profile configuration key
  * if profiel is not undefined

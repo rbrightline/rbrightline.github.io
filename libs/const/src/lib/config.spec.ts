@@ -1,5 +1,6 @@
 import {
   DatabaseConfigKeys,
+  EmailConfigKeys,
   FileSystemConfigKeys,
   JwtConfigKeys,
   ServerConfigKeys,
@@ -38,6 +39,15 @@ describe('Config', () => {
         'EMAIL_TEMPLATES_DIR'
       );
       expect(FileSystemConfigKeys.UPLOAD_DIR).toBe('UPLOAD_DIR');
+    });
+  });
+
+  describe('JWT', () => {
+    it('should have the type, name, username, and password keys', () => {
+      expect(EmailConfigKeys.EMAIL).toBe('EMAIL');
+      expect(EmailConfigKeys.EMAIL_DOMAIN).toBe('EMAIL_DOMAIN');
+      expect(EmailConfigKeys.EMAIL_HOST).toBe('EMAIL_HOST');
+      expect(EmailConfigKeys.EMAIL_PASSWORD).toBe('EMAIL_PASSWORD');
     });
   });
 
