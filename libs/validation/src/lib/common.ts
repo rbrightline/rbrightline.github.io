@@ -9,6 +9,7 @@ import {
 /**
  * Check the common validation
  * - Required
+ * - ValidateIf
  * @param options
  * @returns
  */
@@ -26,6 +27,10 @@ export function CommonValidation(
 
     if (options.validateIf != undefined) {
       ValidateIf(options.validateIf, vo)(t, p);
+    }
+
+    if (options.isString) {
+
     }
   };
 }
