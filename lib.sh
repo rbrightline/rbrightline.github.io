@@ -1,0 +1,20 @@
+npx nx g @nx/js:lib libs/notify --importPath=@rline/notify
+npx nx g @nx/js:lib libs/email --importPath=@rline/email
+npx nx g @nx/js:lib libs/type --importPath=@rline/type
+npx nx g @nx/js:lib libs/orm --importPath=@rline/orm
+npx nx g @nx/js:lib libs/property --importPath=@rline/property
+npx nx g @nx/js:lib libs/validation --importPath=@rline/validation
+npx nx g @nx/js:lib libs/model --importPath=@rline/model
+npx nx g @nx/js:lib libs/entity --importPath=@rline/entity
+npx nx g @nx/js:lib libs/rest --importPath=@rline/rest
+npx nx g @nx/js:lib libs/const --importPath=@rline/const
+npx nx g @nx/js:lib libs/resource --importPath=@rline/resource
+
+npx nx g @nx/js:lib libs/message --importPath=@rline/message
+npx nx g @nx/js:lib libs/live-chat --importPath=@rline/live-chat
+npx nx g @nx/js:lib libs/auth --importPath=@rline/auth
+npx nx g @nx/js:lib libs/inventory --importPath=@rline/inventory
+npx nx g @nx/js:lib libs/ems --importPath=@rline/ems
+npx nx g @nx/js:lib libs/pms --importPath=@rline/pms
+npx nx g @nx/js:lib libs/pos --importPath=@rline/pos
+npx nx g @nx/js:lib libs/hr --importPath=@rline/hr
