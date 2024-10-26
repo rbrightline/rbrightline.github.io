@@ -38,6 +38,14 @@ export type ValidationPropertyOptions = {
   validate: boolean;
 
   /**
+   * Validate the property if the fn returns true
+   * @param obje
+   * @param value
+   * @returns
+   */
+  validateIf: (obje: any, value: any) => boolean;
+
+  /**
    * When set, the property is validated only if the group is provided
    */
   groups: string[];

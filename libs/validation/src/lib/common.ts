@@ -1,5 +1,10 @@
 import { PropertyOptions } from '@rline/type';
-import { IsNotEmpty, IsOptional, ValidationOptions } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsOptional,
+  ValidateIf,
+  ValidationOptions,
+} from 'class-validator';
 
 /**
  * Check the common validation
@@ -17,6 +22,10 @@ export function CommonValidation(
       IsNotEmpty(vo)(t, p);
     } else {
       IsOptional(vo)(t, p);
+    }
+
+    if (options.validateIf != undefined) {
+      ValidateIf(options.validateIf, vo)(t, p);
     }
   };
 }
