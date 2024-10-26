@@ -1,5 +1,6 @@
 import {
   DatabaseConfigKeys,
+  FileSystemConfigKeys,
   JwtConfigKeys,
   ServerConfigKeys,
   toProfileConfigKey,
@@ -29,6 +30,14 @@ describe('Config', () => {
     it('should have the type, name, username, and password keys', () => {
       expect(JwtConfigKeys.EXPIRES).toBe('EXPIRES');
       expect(JwtConfigKeys.SECRET).toBe('SECRET');
+    });
+  });
+  describe('JWT', () => {
+    it('should have the type, name, username, and password keys', () => {
+      expect(FileSystemConfigKeys.EMAIL_TEMPLATES_DIR).toBe(
+        'EMAIL_TEMPLATES_DIR'
+      );
+      expect(FileSystemConfigKeys.UPLOAD_DIR).toBe('UPLOAD_DIR');
     });
   });
 

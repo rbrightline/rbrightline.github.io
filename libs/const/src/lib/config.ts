@@ -17,6 +17,11 @@ export enum JwtConfigKeys {
   EXPIRES = 'EXPIRES',
 }
 
+export enum FileSystemConfigKeys {
+  UPLOAD_DIR = 'UPLOAD_DIR',
+  EMAIL_TEMPLATES_DIR = 'EMAIL_TEMPLATES_DIR',
+}
+
 /**
  * Convert the regular configuraiton key into prefixed-profile configuration key
  * if profiel is not undefined

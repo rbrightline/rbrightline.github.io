@@ -62,6 +62,9 @@
     },
     {
       "path": "./libs/encrypt"
+    },
+    {
+      "path": "./libs/fs"
     }
   ]
 }
