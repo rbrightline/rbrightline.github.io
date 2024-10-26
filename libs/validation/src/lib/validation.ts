@@ -1,3 +1,3 @@
-export function validation(): string {
-  return 'validation';
+export function Validation(): PropertyDecorator {
+  return (t, p) => {};
 }

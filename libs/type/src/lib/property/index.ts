@@ -1,4 +1,4 @@
-// @index('./*', f => `export * from '${f.path}'`)
+// @index(['./*', '!./*.{spec,test,story,stories}.ts'], f => `export * from '${f.path}'`) 
 export * from './common'
 export * from './generated'
 export * from './group'

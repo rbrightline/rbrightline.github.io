@@ -80,6 +80,11 @@ export type UIPropertyOptions = {
   inputType: InputType;
 
   /**
+   * Navigate to the route when clicked
+   */
+  route: string[];
+
+  /**
    * onClick handler
    * @param args
    * @returns
@@ -92,4 +97,9 @@ export type UIPropertyOptions = {
    * @returns
    */
   onHover: Handler;
+
+  /**
+   * Check the user can click the item
+   */
+  canActivate: Handler<boolean>;
 };
