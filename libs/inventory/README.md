@@ -1,0 +1,3 @@
+# inventory
+
+Inventory management service

@@ -1,0 +1,112 @@
+import { CommonPropertyOptions } from './common';
+import { StringFormat } from './string-format';
+
+export type StringOptions = {
+  type: 'string';
+
+  /**
+   * Check the value has at least number of characters
+   */
+  minLength: number;
+
+  /**
+   * Check the value has at most number of characters
+   */
+  maxLength: number;
+
+  /**
+   * Check the value is one of {@link StringFormat}
+   */
+  format: StringFormat;
+
+  /**
+   * Check the value starts with
+   */
+  startsWith: string;
+
+  /**
+   * Check the value ends with
+   */
+  endsWith: string;
+
+  /**
+   * Check the value not starts with
+   */
+  notStartsWith: string;
+
+  /**
+   * Check the value not ends with
+   */
+  notEndsWith: string;
+
+  /**
+   * Check the value contains
+   */
+  contains: string;
+
+  /**
+   * Check the value not contains
+   */
+  notContains: string;
+
+  /**
+   * Check the value is not one of
+   */
+  forbidden: string[];
+
+  /**
+   * Check the value is one of
+   */
+  enum: string[];
+};
+
+export type NumberOptions = {
+  type: 'number';
+
+  /**
+   * Check the value is at least
+   */
+  minimum: number;
+
+  /**
+   * Check the value is at most
+   */
+  maximum: number;
+
+  /**
+   * Check the value is integer
+   */
+  isInt: boolean;
+};
+
+export type BooleanOptions = {
+  type: 'boolean';
+};
+
+export type DateOptions = {
+  type: 'date';
+  maxDate: Date;
+  minDate: Date;
+  future: boolean;
+  past: boolean;
+};
+
+export type ObjectOptions = {
+  type: 'object';
+  target: () => InstanceType<any>;
+};
+
+export type RequiredPropertyOptions = CommonPropertyOptions &
+  (
+    | StringOptions
+    | NumberOptions
+    | BooleanOptions
+    | DateOptions
+    | ObjectOptions
+  );
+
+export type PropertyOptions = Partial<RequiredPropertyOptions>;
+
+
+
+
