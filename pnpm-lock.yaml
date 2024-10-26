@@ -72,8 +72,131 @@ importers:
         specifier: ^1.3.1
         version: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)
 
+  libs/auth:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/const:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/email:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/ems:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/encrypt:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/entity:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/hr:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/inventory:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/live-chat:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/message:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/model:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
   libs/notify:
     dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/orm:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/pms:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/pos:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/property:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/resource:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/rest:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/type:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.0
+
+  libs/validation:
+    dependencies:
+      '@rline/type':
+        specifier: workspace:^
+        version: link:../type
+      class-transformer:
+        specifier: ^0.5.1
+        version: 0.5.1
+      class-validator:
+        specifier: ^0.14.1
+        version: 0.14.1
       tslib:
         specifier: ^2.3.0
         version: 2.8.0
@@ -1195,6 +1318,9 @@ packages:
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
 
+  '@types/validator@13.12.2':
+    resolution: {integrity: sha512-6SlHBzUW8Jhf3liqrGGXyTJSIFe4nqlJ5A5KaMZ2l/vbM3Wh3KSybots/wfWVzNLK4D1NZluDlSQIbIEPx6oyA==}
+
   '@typescript-eslint/eslint-plugin@8.11.0':
     resolution: {integrity: sha512-KhGn2LjW1PJT2A/GfDpiyOfS4a8xHQv2myUagTM5+zsormOmBlYsnQ6pobJ8XxJmh6hnHwa2Mbe3fPrDJoDhbA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1604,6 +1730,12 @@ packages:
 
   check-error@1.0.3:
     resolution: {integrity: sha512-iKEoDYaRmd1mxM90a2OEfWhjsjPpYPuQ+lMYsoxB126+t8fw7ySEO48nmDg5COTjxDI65/Y2OWpeEHk3ZOe8zg==}
+
+  class-transformer@0.5.1:
+    resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==}
+
+  class-validator@0.14.1:
+    resolution: {integrity: sha512-2VEG9JICxIqTpoK1eMzZqaV+u/EiwEJkMGzTrZf6sU/fwsnOITVgYJ8yojSy6CaXtO9V0Cc6ZQZ8h8m4UBuLwQ==}
 
   cli-cursor@3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==}
@@ -2436,6 +2568,9 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  libphonenumber-js@1.11.12:
+    resolution: {integrity: sha512-QkJn9/D7zZ1ucvT++TQSvZuSA2xAWeUytU+DiEQwbPKLyrDpvbul2AFs1CGbRAPpSCCk47aRAb5DX5mmcayp4g==}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -4849,6 +4984,8 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
+  '@types/validator@13.12.2': {}
+
   '@typescript-eslint/eslint-plugin@8.11.0(@typescript-eslint/parser@8.11.0(eslint@9.13.0)(typescript@5.5.4))(eslint@9.13.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-community/regexpp': 4.11.1
@@ -5421,6 +5558,14 @@ snapshots:
   check-error@1.0.3:
     dependencies:
       get-func-name: 2.0.2
+
+  class-transformer@0.5.1: {}
+
+  class-validator@0.14.1:
+    dependencies:
+      '@types/validator': 13.12.2
+      libphonenumber-js: 1.11.12
+      validator: 13.12.0
 
   cli-cursor@3.1.0:
     dependencies:
@@ -6285,6 +6430,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  libphonenumber-js@1.11.12: {}
 
   lines-and-columns@1.2.4: {}
 

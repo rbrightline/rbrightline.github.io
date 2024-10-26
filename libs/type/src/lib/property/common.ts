@@ -1,5 +1,4 @@
-import { SecurityPropertyOptions } from './security';
-import { Clickable } from './clickable';
+import { UIPropertyOptions } from './ui';
 import { ValidationPropertyOptions } from './validation';
 
 export type __CommonPropertyOptions = {
@@ -7,6 +6,6 @@ export type __CommonPropertyOptions = {
   descriptions: string;
 };
 export type CommonPropertyOptions =
+  | __CommonPropertyOptions
   | ValidationPropertyOptions
-  | Clickable
-  | SecurityPropertyOptions;
+  | UIPropertyOptions;

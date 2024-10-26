@@ -28,6 +28,7 @@ export type ValidationPropertyOptions = {
 
   /**
    * When true, the property is excluded
+   * - The input sent by the client is ignored (the value might be set by the system)
    */
   exclude: boolean;
 
@@ -47,4 +48,24 @@ export type ValidationPropertyOptions = {
    * @returns
    */
   validator: (value: any) => any;
+
+  /**
+   * When true, the property is read only and cannot be updated.
+   */
+  readonly: boolean;
+
+  /**
+   * When true, the property is written only and cannot be read.
+   */
+  writeonly: boolean;
+
+  /**
+   * When true, the property value is hashed before saving
+   */
+  hash: boolean;
+
+  /**
+   * When true, the property value is encrypted before saving
+   */
+  encrypt: boolean;
 };

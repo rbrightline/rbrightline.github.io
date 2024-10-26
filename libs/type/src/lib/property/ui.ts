@@ -2,7 +2,7 @@ import { Handler } from '../function';
 import { Icon } from './icon';
 import { InputType } from './input-type';
 
-export type Clickable = {
+export type UIPropertyOptions = {
   /**
    * Text placed before the property value
    */
