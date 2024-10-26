@@ -2,6 +2,9 @@
   "name": "@rline/property",
   "version": "0.0.1",
   "dependencies": {
+    "@nestjs/swagger": "^7.4.2",
+    "@rline/type": "workspace:^",
+    "@rline/validation": "workspace:^",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",

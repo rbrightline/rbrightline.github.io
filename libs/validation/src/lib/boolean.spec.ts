@@ -1,4 +1,4 @@
-import { testProperty } from './utils.spec';
+import { testProperty } from './test-utils.spec';
 
 describe('BooleanValidation', () => {
   it.each`

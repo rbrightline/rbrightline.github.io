@@ -26,8 +26,8 @@ export function testProperty(
     });
   });
 
-  console.log({ value });
-  console.log(foundErrors);
+  // console.log({ value });
+  // console.log(foundErrors);
 
   if (errors) {
     expect(errorCount).toBe(errors.length);
@@ -46,3 +46,13 @@ export function testProperty(
     expect(foundErrors.length).toBe(0);
   }
 }
+
+describe(
+  'Test Utils',
+  () => {
+    it('Test Utils', () => {
+      expect(1).toBe(1);
+    });
+  },
+  { skip: true }
+);

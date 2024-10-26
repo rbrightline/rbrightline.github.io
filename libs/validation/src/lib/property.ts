@@ -7,12 +7,13 @@ import {
   StringOptions,
 } from '@rline/type';
 import { StringValidation } from './string';
-import { IsArray, ValidationOptions, ValidatorOptions } from 'class-validator';
+import { IsArray, ValidationOptions } from 'class-validator';
 import { CommonValidation } from './common';
 import { NumberValidation } from './number';
 import { BooleanValidation } from './boolean';
 import { DateValidation } from './date';
 import { ObjectValidation } from './object';
+import { Exclude, Expose } from 'class-transformer';
 
 export function PropertyValidation(
   options: PropertyOptions
@@ -28,10 +29,15 @@ export function PropertyValidation(
   if (validate === false) return (t, p) => {};
 
   return (t, p) => {
-    if (isArray === true) {
-      IsArray()(t, p);
-    }
+    if (isArray === true) IsArray()(t, p);
+
     CommonValidation(options, vo)(t, p);
+
+    if (options.exclude === true) {
+      Exclude()(t, p);
+    } else {
+      Expose()(t, p);
+    }
 
     if (type === 'string') StringValidation(options as StringOptions, vo)(t, p);
     else if (type === 'number')

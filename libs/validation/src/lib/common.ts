@@ -1,6 +1,5 @@
 import { PropertyOptions } from '@rline/type';
 import {
-  IsArray,
   IsNotEmpty,
   IsOptional,
   ValidateIf,

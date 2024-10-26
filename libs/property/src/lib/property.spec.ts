@@ -1,7 +1,11 @@
-import { property } from './property';
+import { Property } from './property';
 
-describe('property', () => {
+describe('Property', () => {
   it('should work', () => {
-    expect(property()).toEqual('property');
-  })
-})
+    class Abc {
+      @Property({ type: 'string' })
+      value: any;
+    }
+    expect(new Abc()).toBeTruthy();
+  });
+});
