@@ -13,7 +13,7 @@ import { NumberValidation } from './number';
 import { BooleanValidation } from './boolean';
 import { DateValidation } from './date';
 import { ObjectValidation } from './object';
-import { Exclude, Expose } from 'class-transformer';
+import { Exclude, Expose, Transform } from 'class-transformer';
 
 export function PropertyValidation(
   options: PropertyOptions
@@ -30,6 +30,13 @@ export function PropertyValidation(
 
   return (t, p) => {
     if (isArray === true) IsArray()(t, p);
+
+    if (options.defaultValue != undefined) {
+      Transform((value) => (value == undefined ? options.defaultValue : value))(
+        t,
+        p
+      );
+    }
 
     CommonValidation(options, vo)(t, p);
 

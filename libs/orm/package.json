@@ -2,7 +2,12 @@
   "name": "@rline/orm",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "@rline/encrypt": "workspace:^",
+    "@rline/property": "workspace:^",
+    "@rline/type": "workspace:^",
+    "tslib": "^2.3.0",
+    "typeorm": "^0.3.20",
+    "uuid": "^10.0.0"
   },
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -24,5 +29,8 @@
         }
       }
     }
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
   }
 }

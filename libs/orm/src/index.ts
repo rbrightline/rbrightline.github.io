@@ -1,1 +1,1 @@
-export * from './lib/orm';
+export * from './lib';

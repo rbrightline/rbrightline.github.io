@@ -2,6 +2,7 @@
   "name": "@rline/encrypt",
   "version": "0.0.1",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
@@ -24,5 +25,8 @@
         }
       }
     }
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2"
   }
 }

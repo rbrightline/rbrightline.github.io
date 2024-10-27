@@ -2,6 +2,7 @@ import { PropertyValidation } from '@rline/validation';
 import { PropertyOptions } from '@rline/type';
 import { ApiProperty, ApiPropertyOptions } from '@nestjs/swagger';
 
+export { Dto } from '@rline/validation';
 
 export function Property(options: PropertyOptions): PropertyDecorator {
   const required = options.required === true;

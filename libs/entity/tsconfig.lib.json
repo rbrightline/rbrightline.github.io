@@ -13,7 +13,7 @@
   "include": [
     "src/**/*.ts"
   ],
-  "references": [],
+  "references": [{"path":"../validation/tsconfig.lib.json"},{"path":"../property/tsconfig.lib.json"},{"path":"../encrypt/tsconfig.lib.json"},{"path":"../orm/tsconfig.lib.json"},{"path":"../type/tsconfig.lib.json"},{"path":"../model/tsconfig.lib.json"}],
   "exclude": [
     "vite.config.ts",
     "vitest.config.ts",
