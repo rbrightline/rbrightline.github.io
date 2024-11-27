@@ -1,12 +1,12 @@
 {
-  "name": "@rline/<%- fileName %>",
+  "name": "@rline/email",
   "version": "1.5.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
   },
   "keywords": [
-    "<%- fileName %>"
+    "email"
   ],
   "author": {
     "name": "Robert Brightline",
@@ -24,7 +24,7 @@
     "!**/*.tsbuildinfo"
   ],
   "nx": {
-    "sourceRoot": "libs/<%- fileName %>/src",
+    "sourceRoot": "libs/email/src",
     "targets": {
       "build": {
         "executor": "@nx/js:swc",
@@ -32,9 +32,9 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "libs/<%- fileName %>/dist",
-          "main": "libs/<%- fileName %>/src/index.ts",
-          "tsConfig": "libs/<%- fileName %>/tsconfig.lib.json"
+          "outputPath": "libs/email/dist",
+          "main": "libs/email/src/index.ts",
+          "tsConfig": "libs/email/tsconfig.lib.json"
         }
       },
       "test": {
@@ -43,10 +43,10 @@
           "{options.reportsDirectory}"
         ],
         "options": {
-          "reportsDirectory": "../../coverage/libs/<%- fileName %>"
+          "reportsDirectory": "../../coverage/libs/email"
         }
       }
     },
-    "name": "<%- fileName %>"
+    "name": "email"
   }
 }

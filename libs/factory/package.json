@@ -1,12 +1,12 @@
 {
-  "name": "@rline/<%- fileName %>",
+  "name": "@rline/factory",
   "version": "1.5.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
   },
   "keywords": [
-    "<%- fileName %>"
+    "factory"
   ],
   "author": {
     "name": "Robert Brightline",
@@ -24,7 +24,7 @@
     "!**/*.tsbuildinfo"
   ],
   "nx": {
-    "sourceRoot": "libs/<%- fileName %>/src",
+    "sourceRoot": "libs/factory/src",
     "targets": {
       "build": {
         "executor": "@nx/js:swc",
@@ -32,9 +32,9 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "libs/<%- fileName %>/dist",
-          "main": "libs/<%- fileName %>/src/index.ts",
-          "tsConfig": "libs/<%- fileName %>/tsconfig.lib.json"
+          "outputPath": "libs/factory/dist",
+          "main": "libs/factory/src/index.ts",
+          "tsConfig": "libs/factory/tsconfig.lib.json"
         }
       },
       "test": {
@@ -43,10 +43,10 @@
           "{options.reportsDirectory}"
         ],
         "options": {
-          "reportsDirectory": "../../coverage/libs/<%- fileName %>"
+          "reportsDirectory": "../../coverage/libs/factory"
         }
       }
     },
-    "name": "<%- fileName %>"
+    "name": "factory"
   }
 }
