@@ -1,4 +1,5 @@
 export const LIB_NAMES = [
+  'page',
   'tool',
   'script',
   'env',
