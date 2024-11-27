@@ -1,6 +1,15 @@
 const nx = require('@nx/eslint-plugin');
 
 module.exports = [
+  {
+    files: ['**/*.json'],
+    // Override or add rules here
+    rules: {},
+    languageOptions: {
+      parser: require('jsonc-eslint-parser'),
+    },
+  },
+
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
@@ -29,5 +38,14 @@ module.exports = [
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     // Override or add rules here
     rules: {},
+  },
+  {
+    files: ['**/package.json', '**/generators.json'],
+    rules: {
+      '@nx/nx-plugin-checks': 'error',
+    },
+    languageOptions: {
+      parser: require('jsonc-eslint-parser'),
+    },
   },
 ];

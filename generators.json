@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "lib": {
+      "factory": "./gen/lib/generator",
+      "schema": "./gen/lib/schema.json",
+      "description": "lib generator"
+    },
+    "model": {
+      "factory": "./gen/model/generator",
+      "schema": "./gen/model/schema.json",
+      "description": "model generator"
+    }
+  }
+}
