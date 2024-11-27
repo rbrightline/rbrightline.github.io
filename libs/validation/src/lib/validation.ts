@@ -1,7 +1,8 @@
 /**
- * Validation documentation
- * @returns {string}
+ * @param  name required validation name
+ * @returns validation error message
+ *
  */
-export function Validation() {
+export function validation(name: string): string {
   return 'validation';
 }

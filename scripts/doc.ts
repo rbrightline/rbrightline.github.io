@@ -17,5 +17,5 @@ q.prompt([
   },
 ]).then(({ lib }) => {
   chdir(join(__dirname, '..', 'libs', lib));
-  execSync(`compodoc -p tsconfig.doc.json`);
+  execSync(`compodoc -p tsconfig.json -d ../../docs/docs/${lib}`);
 });

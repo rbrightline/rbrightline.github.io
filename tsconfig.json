@@ -10,6 +10,7 @@
     { "path": "./libs/entity" },
     { "path": "./libs/factory" },
     { "path": "./libs/gen" },
+    { "path": "./libs/graph" },
     { "path": "./libs/model" },
     { "path": "./libs/orm" },
     { "path": "./libs/path" },
