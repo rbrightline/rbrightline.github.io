@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": false,
     "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
     "importHelpers": true,
     "incremental": true,
     "isolatedModules": true,
