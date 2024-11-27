@@ -7,5 +7,4 @@ export const LIB_NAMES = [
   'script',
   'env',
   ...readdirSync(join(__dirname, '..', '..', 'libs')),
-  ...readdirSync(join(__dirname, '..', '..', 'gen')),
 ];
