@@ -1,5 +1,16 @@
 // @index(['./**/*.ts', '!./**/*.{spec,test,story,stories}.ts'], f => `export * from '${f.path}'`)
 export * from './lib/common/class-constructor';
+export * from './lib/common/property-type';
+export * from './lib/property/array';
+export * from './lib/property/boolean';
+export * from './lib/property/common';
+export * from './lib/property/date';
+export * from './lib/property/number';
+export * from './lib/property/object';
+export * from './lib/property/property';
+export * from './lib/property/string';
+export * from './lib/property/ui';
+export * from './lib/validation/array';
 export * from './lib/validation/boolean';
 export * from './lib/validation/common';
 export * from './lib/validation/date';

@@ -26,4 +26,14 @@ export class NumberValidationOptions {
    * define the allowed rage of numbers.
    */
   range: [number, number];
+
+  /**
+   * define the object's property such that its value must always be more than this property's value.
+   */
+  moreThan: string;
+
+  /**
+   * define the object's property such that its value must always be less than this property's value.
+   */
+  lessThan: string;
 }

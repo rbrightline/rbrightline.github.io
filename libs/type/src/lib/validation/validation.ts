@@ -1,9 +1,24 @@
+import { ArrayValidationOptions } from './array';
 import { BooleanValidationOptions } from './boolean';
 import { CommonValidationOptions } from './common';
 import { DateValidationOptions } from './date';
 import { NumberValidationOptions } from './number';
 import { ObjectValidationOptions } from './object';
 import { StringValidationOptions } from './string';
+
+/**
+ * @ignore
+ */
+export type PrimitiveValidationOptions = Partial<
+  CommonValidationOptions &
+    (
+      | BooleanValidationOptions
+      | DateValidationOptions
+      | NumberValidationOptions
+      | ObjectValidationOptions
+      | StringValidationOptions
+    )
+>;
 
 /**
  * Property validation options
@@ -54,14 +69,18 @@ import { StringValidationOptions } from './string';
  * }
  * ````
  *
+ * ````typescript
+ * // Array validation options
+ * const options: ValidationOptions = {
+ *  type: "array",
+ *  items:{
+ *    type: "string"
+ *  }
+ * }
+ * ````
+ *
  */
 export type ValidationOptions = Partial<
-  CommonValidationOptions &
-    (
-      | BooleanValidationOptions
-      | DateValidationOptions
-      | NumberValidationOptions
-      | ObjectValidationOptions
-      | StringValidationOptions
-    )
+  | PrimitiveValidationOptions
+  | ArrayValidationOptions<PrimitiveValidationOptions>
 >;

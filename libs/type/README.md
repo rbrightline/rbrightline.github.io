@@ -1,4 +1,6 @@
-# type
+### Install
+
+`pnpm add @rline/type`
 
 ### Summary
 
