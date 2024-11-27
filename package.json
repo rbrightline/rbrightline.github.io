@@ -2,7 +2,9 @@
   "name": "@rbrightline.github.io/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "commit": "ts-node ./scripts/commit.ts"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
