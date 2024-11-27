@@ -8,20 +8,19 @@ import { StringValidationOptions } from './string';
 /**
  * Property validation options
  *
- * @example
- * ## String validation options
  * ````typescript
- * const options: ValidationOptions = {
+ * // String validation options
+ * const stringOptions: ValidationOptions = {
  *  type: "string",
  *  minLength: 3,
  *  maxLength: 30,
  *  format: StringFormat.Password,
  *  pattern: '/(regular-expression)/'
  * }
- *
  * ````
- * ## Number validation options
+ *
  * ````typescript
+ *  // Number validation options
  * const options: ValidationOptions = {
  *  type: "number",
  *  minimum: 1,
@@ -29,13 +28,30 @@ import { StringValidationOptions } from './string';
  *  range: [1, 100],
  *  isInt: true
  * }
+ * ````
  *
- * ## Boolean validation options
  * ````typescript
+ *  // Date validation options
+ * const options: ValidationOptions = {
+ *  type: "date",
+ *  past: true,
+ *  future: true
+ * }
+ * ````
+ *
+ * ````typescript
+ * // Boolean validation options
  * const options: ValidationOptions = {
  *  type: "boolean",
  * }
+ * ````
  *
+ * ````typescript
+ * // Object validation options
+ * const options: ValidationOptions = {
+ *  type: "object",
+ *  target: ()=> TargetClass
+ * }
  * ````
  *
  */

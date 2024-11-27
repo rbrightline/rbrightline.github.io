@@ -163,7 +163,33 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Property validation options</p>
-</div>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// String validation options
+const stringOptions: ValidationOptions = {
+ type: &quot;string&quot;,
+ minLength: 3,
+ maxLength: 30,
+ format: StringFormat.Password,
+ pattern: &#39;/(regular-expression)/&#39;
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript"> // Number validation options
+const options: ValidationOptions = {
+ type: &quot;number&quot;,
+ minimum: 1,
+ maximum: 100,
+ range: [1, 100],
+ isInt: true
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript"> // Date validation options
+const options: ValidationOptions = {
+ type: &quot;date&quot;,
+ past: true,
+ future: true
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Boolean validation options
+const options: ValidationOptions = {
+ type: &quot;boolean&quot;,
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Object validation options
+const options: ValidationOptions = {
+ type: &quot;object&quot;,
+ target: ()=&gt; TargetClass
+}</code></pre></div></div>
                 </td>
             </tr>
             <tr>
