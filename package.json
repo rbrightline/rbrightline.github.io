@@ -1,6 +1,6 @@
 {
   "name": "@rbrightline.github.io/source",
-  "version": "0.0.0",
+  "version": "1.5.2",
   "license": "MIT",
   "scripts": {
     "commit": "ts-node ./scripts/commit.ts"
