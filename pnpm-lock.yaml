@@ -85,6 +85,42 @@ importers:
         specifier: ^1.3.1
         version: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)
 
+  libs/auth:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/const:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/controller:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/email:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/entity:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/factory:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
   libs/gen:
     dependencies:
       '@nx/devkit':
@@ -97,13 +133,49 @@ importers:
         specifier: ^5.0.0
         version: 5.4.11(@types/node@18.16.9)
 
-  libs/sample:
+  libs/model:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/orm:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/path:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/property:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/rest:
     dependencies:
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
 
   libs/type:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/util:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
+  libs/validation:
     dependencies:
       '@swc/helpers':
         specifier: ~0.5.11
