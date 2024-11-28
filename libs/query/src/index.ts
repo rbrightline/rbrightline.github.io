@@ -2,5 +2,6 @@
 export * from './lib/create-query-item';
 export * from './lib/is-query-string';
 export * from './lib/operator';
+export * from './lib/parse-query-item';
 export * from './lib/query-input';
 export * from './lib/query-pattern';

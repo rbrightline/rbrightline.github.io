@@ -21,7 +21,9 @@ export function createQueryItem(
   operator: QueryOperator,
   search: string
 ): string | undefined {
-  const queryString = `${operator}:${search}`;
-  if (isQueryString(queryString)) return queryString;
+  if (operator && search) {
+    const queryString = `${operator}:${search}`;
+    if (isQueryString(queryString)) return queryString;
+  }
   return undefined;
 }
