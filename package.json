@@ -3,7 +3,8 @@
   "version": "1.5.2",
   "license": "MIT",
   "scripts": {
-    "commit": "ts-node ./scripts/commit.ts"
+    "commit": "ts-node ./scripts/commit.ts",
+    "doc": "ts-node ./scripts/doc.ts"
   },
   "private": true,
   "devDependencies": {

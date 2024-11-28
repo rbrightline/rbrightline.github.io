@@ -115,6 +115,12 @@
                             <a href="#ClassConstructor" title="src/lib/common/class-constructor.ts" ><b>ClassConstructor</b>&nbsp;&nbsp;&nbsp;(src/.../class-constructor.ts)</a>
                         </li>
                         <li>
+                            <a href="#PropertyOptions" title="src/lib/property/property.ts" ><b>PropertyOptions</b>&nbsp;&nbsp;&nbsp;(src/.../property.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#PropertyType" title="src/lib/common/property-type.ts" ><b>PropertyType</b>&nbsp;&nbsp;&nbsp;(src/.../property-type.ts)</a>
+                        </li>
+                        <li>
                             <a href="#ValidationOptions" title="src/lib/validation/validation.ts" ><b>ValidationOptions</b>&nbsp;&nbsp;&nbsp;(src/.../validation.ts)</a>
                         </li>
                     </ul>
@@ -145,6 +151,80 @@
             <tr>
                 <td class="col-md-4">
                     <code>    <code>literal type</code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/property/property.ts</h3>
+    <section data-compodoc="block-typealias">
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="PropertyOptions"></a>
+                    <span class="name "><b>PropertyOptions</b><a href="#PropertyOptions"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Property options</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// String property options
+const stringOptions: PropertyOptions = {
+ type: &quot;string&quot;,
+ minLength: 3,
+ maxLength: 30,
+ format: StringFormat.Password,
+ pattern: &#39;/(regular-expression)/&#39;
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript"> // Number property options
+const options: PropertyOptions = {
+ type: &quot;number&quot;,
+ minimum: 1,
+ maximum: 100,
+ range: [1, 100],
+ isInt: true
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript"> // Date property options
+const options: PropertyOptions = {
+ type: &quot;date&quot;,
+ past: true,
+ future: true
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Boolean property options
+const options: PropertyOptions = {
+ type: &quot;boolean&quot;,
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Object property options
+const options: PropertyOptions = {
+ type: &quot;object&quot;,
+ target: ()=&gt; TargetClass
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Array property options
+const options: PropertyOptions = {
+ type: &quot;array&quot;,
+ items:{
+   type: &quot;string&quot;
+ }
+}</code></pre></div></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>        <code><a href="../miscellaneous/typealiases.html#PropertyOptions" target="_self" >PrimitivePropertyOptions | UIPropertyOptions | ArrayPropertyOptions&lt;PrimitivePropertyOptions&gt;</a></code>
+</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/common/property-type.ts</h3>
+    <section data-compodoc="block-typealias">
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="PropertyType"></a>
+                    <span class="name "><b>PropertyType</b><a href="#PropertyType"><span class="icon ion-ios-link"></span></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <code>    <code>&quot;string&quot; | &quot;number&quot; | &quot;date&quot; | &quot;object&quot; | &quot;boolean&quot; | &quot;array&quot;</code>
 </code>
                 </td>
             </tr>
@@ -189,12 +269,18 @@ const options: ValidationOptions = {
 const options: ValidationOptions = {
  type: &quot;object&quot;,
  target: ()=&gt; TargetClass
+}</code></pre></div><b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">// Array validation options
+const options: ValidationOptions = {
+ type: &quot;array&quot;,
+ items:{
+   type: &quot;string&quot;
+ }
 }</code></pre></div></div>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <code>    <code>Partial&lt;&gt;</code>
+                    <code>        <code><a href="../classes/ArrayValidationOptions.html" target="_self" >Partial&lt;PrimitiveValidationOptions | ArrayValidationOptions&gt;</a></code>
 </code>
                 </td>
             </tr>

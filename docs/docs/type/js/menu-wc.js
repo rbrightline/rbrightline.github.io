@@ -54,22 +54,49 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
+                                <a href="classes/ArrayPropertyOptions.html" data-type="entity-link" >ArrayPropertyOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/ArrayValidationOptions.html" data-type="entity-link" >ArrayValidationOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/BooleanPropertyOptions.html" data-type="entity-link" >BooleanPropertyOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/BooleanValidationOptions.html" data-type="entity-link" >BooleanValidationOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/CommonPropertyOptions.html" data-type="entity-link" >CommonPropertyOptions</a>
                             </li>
                             <li class="link">
                                 <a href="classes/CommonValidationOptions.html" data-type="entity-link" >CommonValidationOptions</a>
                             </li>
                             <li class="link">
+                                <a href="classes/DatePropertyOptions.html" data-type="entity-link" >DatePropertyOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/DateValidationOptions.html" data-type="entity-link" >DateValidationOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/NumberPropertyOptions.html" data-type="entity-link" >NumberPropertyOptions</a>
                             </li>
                             <li class="link">
                                 <a href="classes/NumberValidationOptions.html" data-type="entity-link" >NumberValidationOptions</a>
                             </li>
                             <li class="link">
+                                <a href="classes/ObjectPropertyOptions.html" data-type="entity-link" >ObjectPropertyOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/ObjectValidationOptions.html" data-type="entity-link" >ObjectValidationOptions</a>
                             </li>
                             <li class="link">
+                                <a href="classes/StringPropertyOptions.html" data-type="entity-link" >StringPropertyOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/StringValidationOptions.html" data-type="entity-link" >StringValidationOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/UIPropertyOptions.html" data-type="entity-link" >UIPropertyOptions</a>
                             </li>
                         </ul>
                     </li>

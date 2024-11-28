@@ -147,6 +147,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#exclude" >exclude</a>
+                            </li>
+                            <li>
                                 <a href="#isArray" >isArray</a>
                             </li>
                             <li>
@@ -157,6 +160,9 @@
                             </li>
                             <li>
                                 <a href="#required" >required</a>
+                            </li>
+                            <li>
+                                <a href="#unique" >unique</a>
                             </li>
                         </ul>
                     </td>
@@ -177,6 +183,38 @@
     <h3 id="inputs">
         Properties
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exclude"></a>
+                    <span class="name">
+                        <span ><b>exclude</b></span>
+                        <a href="#exclude"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/validation/common.ts:33</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>define the property is excluded or not.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -228,7 +266,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/lib/validation/common.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/lib/validation/common.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -260,7 +298,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/lib/validation/common.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/validation/common.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -305,6 +343,38 @@
 
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unique"></a>
+                    <span class="name">
+                        <span ><b>unique</b></span>
+                        <a href="#unique"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/lib/validation/common.ts:18</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>define the property is <code>unique</code> or not.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 </section>
 
 
@@ -329,6 +399,11 @@
   required: boolean;
 
   /**
+   * define the property is &#x60;unique&#x60; or not.
+   */
+  unique: boolean;
+
+  /**
    * define the property is &#x60;passed as string value&#x60;. This is for properties that is provided as string but used as different type, for example, provided string and used as number. If &#x60;true&#x60;, string value is transformed into the provided property type before validation.
    */
   isString: boolean;
@@ -337,6 +412,11 @@
    * define the property is &#x60;validated or not&#x60;.
    */
   notValidate: boolean;
+
+  /**
+   * define the property is excluded or not.
+   */
+  exclude: boolean;
 }
 </code></pre>
     </div>
