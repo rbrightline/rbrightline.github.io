@@ -8,6 +8,35 @@ import { ObjectValidation } from './object';
 import { StringValidation } from './string';
 import { CommonValidation } from './common';
 
+/**
+ * @internal do not use this decorator in your code. This is a helper decorator to create the validation decorator.
+ * @param options {@link ValidationOptions}
+ * @param vo {@link __ValidationOptions}
+ * @returns property decorators {@link PropertyDecorator}
+ *
+ * ````typescript
+ *
+ * class TargetClass {}
+ *
+ * class Sample {
+ *   @Validation({ type: 'string', minLength: 3, maxLength: 30 })
+ *   str: string;
+ *
+ *   @Validation({ type: 'number', minimum: 0, maximum: 100 })
+ *   num: string;
+ *
+ *   @Validation({ type: 'date', future: true })
+ *   date: string;
+ *
+ *   @Validation({ type: 'object', target: () => TargetClass })
+ *   obj: string;
+ *
+ *   @Validation({ type: 'array', items: { type: 'string' } })
+ *   arr: string[];
+ * }
+ * ````
+ *
+ */
 export function PrimitiveValiation(
   options: ValidationOptions,
   vo: __ValidationOptions
@@ -33,10 +62,11 @@ export function PrimitiveValiation(
     }
   };
 }
+
 /**
- * @param  name required validation name
- * @returns validation error message
- *
+ * Validation decorator
+ * @param options validation options {@link ValidationOptions}
+ * @returns property decorator {@link PropertyDecorator}
  */
 export function Validation(options: ValidationOptions): PropertyDecorator {
   return (t, p) => {

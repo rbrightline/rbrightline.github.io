@@ -9,7 +9,7 @@ export function CommonValidation(
   return (t, p) => {
     const { required, exclude, isString } = options;
 
-    if (required) {
+    if (required == true) {
       IsNotEmpty(vo)(t, p);
     } else {
       IsOptional(vo)(t, p);

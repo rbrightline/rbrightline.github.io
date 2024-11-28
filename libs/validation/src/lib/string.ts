@@ -17,10 +17,10 @@ import {
 } from 'class-validator';
 
 /**
- * Validate string format
- * @param format {@link StringFormat}
- * @param vo {@link ValidationOptions}
- * @returns {@link PropertyDecorator}
+ * @internal this is a helper decorator to create the validation decorator.
+ * @param options string validation options {@link StringValidationOptions}
+ * @param vo validation options {@link ValidationOptions}
+ * @returns property decorator {@link PropertyDecorator}
  */
 export function StringFormatValidation(
   format: StringFormat,
@@ -57,7 +57,7 @@ export function StringFormatValidation(
 }
 
 /**
- * Validate string value
+ * String validation decorator
  * @param options {@link StringValidationOptions }
  * @param vo {@link ValidationOptions}
  * @returns {@link PropertyDecorator}

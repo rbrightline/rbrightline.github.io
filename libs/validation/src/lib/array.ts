@@ -1,6 +1,12 @@
 import { ArrayValidationOptions } from '@rline/type';
 import { IsArray, ArrayMaxSize, ArrayUnique } from 'class-validator';
 
+/**
+ * @internal this is a helper decorator to create the validation decorator.
+ * @param options arrray validation options {@link ArrayValidationOptions}
+ * @param vo validation options {@link ValidationOptions}
+ * @returns property decorator {@link PropertyDecorator}
+ */
 export function ArrayValidation(
   options: Partial<ArrayValidationOptions>
 ): PropertyDecorator {

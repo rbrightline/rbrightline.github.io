@@ -2,38 +2,39 @@ import {
   registerDecorator,
   ValidationOptions,
   ValidationArguments,
+  isDate,
 } from 'class-validator';
 
-export const MORE_THAN_CONSTRAINT_NAME = 'moreThan';
+export const MORE_THAN_DATE_CONSTRAINT_NAME = 'moreThanDate';
 
 /**
- * Validate the property is less than the target property's value
+ * Validate the property is after the target property's value
  * @param property the target property name
  * @param validationOptions validation options {@link ValidationOptions}
  * @returns property decorator {@link PropertyDecorator}
  */
-export function MoreThan(
+export function MoreThanDate(
   property: string,
   validationOptions?: ValidationOptions
 ): PropertyDecorator {
   return (object: any, propertyName: any) => {
     registerDecorator({
-      name: MORE_THAN_CONSTRAINT_NAME,
+      name: MORE_THAN_DATE_CONSTRAINT_NAME,
       target: object.constructor,
       propertyName: propertyName,
       constraints: [property],
       options: {
         ...validationOptions,
-        message: `${propertyName} must be less than ${property}.`,
+        message: `${propertyName} must be after ${property}.`,
       },
       validator: {
         validate(value: any, args: ValidationArguments) {
           const [relatedPropertyName] = args.constraints;
           const relatedValue = (args.object as any)[relatedPropertyName];
           return (
-            typeof value === 'number' &&
-            typeof relatedValue === 'number' &&
-            value > relatedValue
+            isDate(value) &&
+            isDate(relatedValue) &&
+            value.getTime() > relatedValue.getTime()
           );
         },
       },
