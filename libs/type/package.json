@@ -1,6 +1,6 @@
 {
   "name": "@rline/type",
-  "version": "1.12.0",
+  "version": "2.0.1",
   "description": "Rline libraries",
   "publishConfig": {
     "access": "public",
