@@ -1,6 +1,6 @@
 {
   "name": "@rline/validation",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -23,7 +23,7 @@
     "class-validator": "^0.14.1"
   },
   "dependencies": {
-    "@rline/type": "workspace:*",
+    "@rline/type": "1.10.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
