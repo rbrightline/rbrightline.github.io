@@ -160,11 +160,11 @@ importers:
   libs/property:
     dependencies:
       '@rline/type':
-        specifier: workspace:*
-        version: link:../type
+        specifier: 1.11.0
+        version: 1.11.0
       '@rline/validation':
-        specifier: workspace:*
-        version: link:../validation
+        specifier: 1.11.0
+        version: 1.11.0(class-transformer@0.5.1)(class-validator@0.14.1)
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -200,8 +200,8 @@ importers:
   libs/validation:
     dependencies:
       '@rline/type':
-        specifier: workspace:*
-        version: link:../type
+        specifier: 1.11.0
+        version: 1.11.0
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -1516,6 +1516,15 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+
+  '@rline/type@1.11.0':
+    resolution: {integrity: sha512-4J/sf/R/qNAyp4rrFCAOpOi1YmGiJDmtHlobG/14c17vpSNDUuvuv5bquDVXr4WGPaChPkB+vxFmkzOzQcVkPA==}
+
+  '@rline/validation@1.11.0':
+    resolution: {integrity: sha512-rb8bQqpmpd79A+gX4W6MvOpAPkEPtGoxJsRmpIffdXaGLRsj3xFgHDv8nFRxWfmPaCvGlUqQYWZ7iYP+JTYOiw==}
+    peerDependencies:
+      class-transformer: ^0.5.1
+      class-validator: ^0.14.1
 
   '@rollup/rollup-android-arm-eabi@4.27.4':
     resolution: {integrity: sha512-2Y3JT6f5MrQkICUyRVCw4oa0sutfAsgaSsb0Lmmy1Wi2y7X5vT9Euqw4gOsCyy0YfKURBg35nhUKZS4mDcfULw==}
@@ -6458,6 +6467,17 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
+  '@rline/type@1.11.0':
+    dependencies:
+      tslib: 2.8.1
+
+  '@rline/validation@1.11.0(class-transformer@0.5.1)(class-validator@0.14.1)':
+    dependencies:
+      '@rline/type': 1.11.0
+      class-transformer: 0.5.1
+      class-validator: 0.14.1
+      tslib: 2.8.1
+
   '@rollup/rollup-android-arm-eabi@4.27.4':
     optional: true
 
@@ -6701,8 +6721,7 @@ snapshots:
 
   '@types/stack-utils@2.0.3': {}
 
-  '@types/validator@13.12.2':
-    optional: true
+  '@types/validator@13.12.2': {}
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -7390,15 +7409,13 @@ snapshots:
 
   cjs-module-lexer@1.4.1: {}
 
-  class-transformer@0.5.1:
-    optional: true
+  class-transformer@0.5.1: {}
 
   class-validator@0.14.1:
     dependencies:
       '@types/validator': 13.12.2
       libphonenumber-js: 1.11.15
       validator: 13.12.0
-    optional: true
 
   cli-cursor@3.1.0:
     dependencies:
@@ -8759,8 +8776,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libphonenumber-js@1.11.15:
-    optional: true
+  libphonenumber-js@1.11.15: {}
 
   lines-and-columns@1.2.4: {}
 
