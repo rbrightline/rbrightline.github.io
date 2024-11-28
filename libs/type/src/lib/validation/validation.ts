@@ -10,11 +10,14 @@ import { StringValidationOptions } from './string';
  * @ignore
  */
 export type RawPrimitiveOptions = Partial<
-  | BooleanValidationOptions
-  | DateValidationOptions
-  | NumberValidationOptions
-  | ObjectValidationOptions
-  | StringValidationOptions
+  CommonValidationOptions &
+    (
+      | BooleanValidationOptions
+      | DateValidationOptions
+      | NumberValidationOptions
+      | ObjectValidationOptions
+      | StringValidationOptions
+    )
 >;
 
 /**

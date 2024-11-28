@@ -1,23 +1,5 @@
-import { ArrayPropertyOptions } from './array';
-import { BooleanPropertyOptions } from './boolean';
+import { ValidationOptions } from '../validation/validation';
 import { CommonPropertyOptions } from './common';
-import { DatePropertyOptions } from './date';
-import { NumberPropertyOptions } from './number';
-import { ObjectPropertyOptions } from './object';
-import { StringPropertyOptions } from './string';
-import { UIPropertyOptions } from './ui';
-
-/**
- * @ignore
- */
-export type PrimitivePropertyOptions = CommonPropertyOptions &
-  (
-    | BooleanPropertyOptions
-    | DatePropertyOptions
-    | NumberPropertyOptions
-    | ObjectPropertyOptions
-    | StringPropertyOptions
-  );
 
 /**
  * Property options
@@ -79,7 +61,4 @@ export type PrimitivePropertyOptions = CommonPropertyOptions &
  * ````
  *
  */
-export type PropertyOptions =
-  | PrimitivePropertyOptions
-  | UIPropertyOptions
-  | ArrayPropertyOptions<PrimitivePropertyOptions>;
+export type PropertyOptions = ValidationOptions & CommonPropertyOptions;

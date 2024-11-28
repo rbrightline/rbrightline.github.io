@@ -13,7 +13,12 @@
     "email": "robert.brightline@gmail.com",
     "url": "https://rbrightline.github.io"
   },
+  "optionalDependencies": {
+    "@nestjs/swagger": "^8.0.7"
+  },
   "dependencies": {
+    "@rline/type": "workspace:*",
+    "@rline/validation": "workspace:*",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
