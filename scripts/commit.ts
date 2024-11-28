@@ -18,14 +18,20 @@ q.prompt([
     type: 'input',
     message: 'Message',
   },
-]).then(({ tag, lib, msg }) => {
+  {
+    name: 'push',
+    type: 'confirm',
+    message: 'Would you like to push?',
+    default: false,
+  },
+]).then(({ tag, lib, msg, push }) => {
   const message = `[${lib}] [${tag}] ${msg}`;
   console.log(message);
 
   execSync('git add .');
   execSync(`git commit -m"${message}"`);
 
-  // if (push == true) {
-  //   execSync('git push');
-  // }
+  if (push == true) {
+    execSync('git push');
+  }
 });
