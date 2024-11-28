@@ -31,7 +31,5 @@ q.prompt([
   execSync('git add .');
   execSync(`git commit -m"${message}"`);
 
-  if (push == true) {
-    execSync('git push');
-  }
+  if (push == true) execSync('git push');
 });
