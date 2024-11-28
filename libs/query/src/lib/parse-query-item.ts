@@ -1,5 +1,5 @@
 import { isQueryString } from './is-query-string';
-import { QueryItem } from './query-input';
+import { QueryItem } from './query-item';
 import { QUERY_STRING_DELIMETER } from './query-pattern';
 
 /**
