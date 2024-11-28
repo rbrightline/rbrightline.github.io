@@ -20,7 +20,7 @@ export type PrimitivePropertyOptions = CommonPropertyOptions &
   );
 
 /**
- * Property property options
+ * Property options
  *
  * ````typescript
  * // String property options

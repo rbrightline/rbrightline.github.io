@@ -1,18 +1,13 @@
+# @rline/type
+
 ### Install
 
 `pnpm add @rline/type`
 
 ### Summary
 
-Provides comonly used classes, types, and interfaces for the projects. Most of the libraries use this library.
-
 ### Examples
 
-### Release Notes
+### Doc
 
-Provides types for the following libraries.
-
-- @rline/validation
-- @rline/property
-- @rline/orm
-- @rline/model
+[Documentation](https://rbrightline.github.io/docs/type)

@@ -18,6 +18,7 @@
     { "path": "./libs/rest" },
     { "path": "./libs/type" },
     { "path": "./libs/util" },
-    { "path": "./libs/validation" }
+    { "path": "./libs/validation" },
+    { "path": "./libs/query" }
   ]
 }

@@ -1,5 +1,8 @@
 import { CommonValidationOptions } from '../validation/common';
 
+/**
+ * Common property options.
+ */
 export class CommonPropertyOptions extends CommonValidationOptions {
   /**
    * provide a short description of the property.
