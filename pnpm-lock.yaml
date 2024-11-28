@@ -112,8 +112,8 @@ importers:
   libs/entity:
     dependencies:
       '@rline/orm':
-        specifier: ^2.0.1
-        version: 2.0.1(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))
+        specifier: ^2.1.0
+        version: 2.1.0(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -151,14 +151,14 @@ importers:
   libs/orm:
     dependencies:
       '@rline/property':
-        specifier: 2.0.1
-        version: 2.0.1(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+        specifier: 2.1.0
+        version: 2.1.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
       '@rline/type':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@rline/validation':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -185,11 +185,11 @@ importers:
   libs/property:
     dependencies:
       '@rline/type':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@rline/validation':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -207,8 +207,8 @@ importers:
   libs/rest:
     dependencies:
       '@rline/path':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -235,8 +235,8 @@ importers:
   libs/validation:
     dependencies:
       '@rline/type':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 2.1.0
+        version: 2.1.0
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -1575,20 +1575,20 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@rline/orm@2.0.1':
-    resolution: {integrity: sha512-OZtO3I2Nmg9WzIFKtlsG0a6mNzVexcz6R9vJKChupGW4WwYV4UPWv6S/Tji1y4w7AoiONWB76o4Xxb+gQuEWYg==}
+  '@rline/orm@2.1.0':
+    resolution: {integrity: sha512-jXQFHRKcsw+8dlH2m5i7DJbmoUMu8WYOUO7qUHQv4K4GJJ0k7bY8lcX80mYa9ykAkOD6FutIJWH0/FHyRr+vqQ==}
 
-  '@rline/path@2.0.1':
-    resolution: {integrity: sha512-JbxWehBa21z0eaKMHG2V+hLdCAIED7wE6KEyzSi4lCiThdw++ShDRW5XRvfdVznex50TnTLKr5a01AxeeH+ChQ==}
+  '@rline/path@2.1.0':
+    resolution: {integrity: sha512-ZYpYALobNJGfu/B7CEYahejqhfCOpkpg6kr8Fk3c8+Lj68XvT6E7mTKyOE0OCJdL1afFs35u1ZrAcPkPA1Ib2Q==}
 
-  '@rline/property@2.0.1':
-    resolution: {integrity: sha512-e7X77LgQ6dYedmX6D9vgra9uJGe5vhMfutsA8TRq+/ag0KgYiKm8Zi7R9mRPLM+w8OImuCz1UXdZgLEHz7D2Fw==}
+  '@rline/property@2.1.0':
+    resolution: {integrity: sha512-Nx1Hirau0WB73/kWEOBQ5zkKhff+Nqe0wsnaxS90mFNxpZx9IMnVy1WCsjBZZYP0Rcs+D/Xfrb8Agz2R08Dq+w==}
 
-  '@rline/type@2.0.1':
-    resolution: {integrity: sha512-v7xTEXi7KJvTyd/Oh7Ayp+GY3fw9W40wCFbpf8jK1SRlkgTT0AaUiAt3wZahsw8VWH8BDRAJavwC0A8h2A8zBg==}
+  '@rline/type@2.1.0':
+    resolution: {integrity: sha512-Ito5Jmubb4gXd4ZVJ3twm0V+enh1LAKLohVyODTZ7YheFOPnme7LrCw4lvlPavVS2sH1qzzZlPaMlmcNDvS4qw==}
 
-  '@rline/validation@2.0.1':
-    resolution: {integrity: sha512-PCnqdwK0eOddM/3zsXbZZMhy2qRV2K3xfbbacmK6W3rxxLGF9CtH8xdxRGVbpSuzMvy+SaM6xT6GKtA5iMU0+g==}
+  '@rline/validation@2.1.0':
+    resolution: {integrity: sha512-5t2AiYW8NSZ+YCSt77H/FOJa4OlVZmEYsOYe7c++35lYfCHIlMSs8Innz6qM5wf6OXxPLHZf7mxvzyOuwSKAeQ==}
 
   '@rollup/rollup-android-arm-eabi@4.27.4':
     resolution: {integrity: sha512-2Y3JT6f5MrQkICUyRVCw4oa0sutfAsgaSsb0Lmmy1Wi2y7X5vT9Euqw4gOsCyy0YfKURBg35nhUKZS4mDcfULw==}
@@ -6734,11 +6734,11 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rline/orm@2.0.1(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))':
+  '@rline/orm@2.1.0(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))':
     dependencies:
-      '@rline/property': 2.0.1(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
-      '@rline/type': 2.0.1
-      '@rline/validation': 2.0.1
+      '@rline/property': 2.1.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+      '@rline/type': 2.1.0
+      '@rline/validation': 2.1.0
       '@swc/helpers': 0.5.15
     optionalDependencies:
       '@nestjs/common': 10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
@@ -6771,14 +6771,14 @@ snapshots:
       - ts-node
       - typeorm-aurora-data-api-driver
 
-  '@rline/path@2.0.1':
+  '@rline/path@2.1.0':
     dependencies:
       '@swc/helpers': 0.5.15
 
-  '@rline/property@2.0.1(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)':
+  '@rline/property@2.1.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)':
     dependencies:
-      '@rline/type': 2.0.1
-      '@rline/validation': 2.0.1
+      '@rline/type': 2.1.0
+      '@rline/validation': 2.1.0
       '@swc/helpers': 0.5.15
     optionalDependencies:
       '@nestjs/swagger': 8.0.7(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
@@ -6790,13 +6790,13 @@ snapshots:
       - class-validator
       - reflect-metadata
 
-  '@rline/type@2.0.1':
+  '@rline/type@2.1.0':
     dependencies:
       '@swc/helpers': 0.5.15
 
-  '@rline/validation@2.0.1':
+  '@rline/validation@2.1.0':
     dependencies:
-      '@rline/type': 2.0.1
+      '@rline/type': 2.1.0
       '@swc/helpers': 0.5.15
     optionalDependencies:
       class-transformer: 0.5.1

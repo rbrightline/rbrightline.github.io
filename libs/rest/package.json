@@ -1,6 +1,6 @@
 {
   "name": "@rline/rest",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -18,7 +18,7 @@
     "@nestjs/swagger": "^8.0.7"
   },
   "dependencies": {
-    "@rline/path": "2.0.1",
+    "@rline/path": "2.1.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
