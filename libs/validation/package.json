@@ -8,6 +8,11 @@
   "keywords": [
     "validation"
   ],
+  "repository": {
+    "directory": ".",
+    "type": "github",
+    "url": "https://github.com/rbrightline/rbrightline.github.io/tree/main/libs/validation"
+  },
   "author": {
     "name": "Robert Brightline",
     "email": "robert.brightline@gmail.com",

@@ -2,7 +2,7 @@ import { BooleanValidationOptions } from '@rline/type';
 import { IsBoolean, ValidationOptions } from 'class-validator';
 
 export function BooleanValidation(
-  options: BooleanValidationOptions,
+  options: Partial<BooleanValidationOptions>,
   vo: ValidationOptions
 ): PropertyDecorator {
   return (t, p) => {

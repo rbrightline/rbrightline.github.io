@@ -6,6 +6,7 @@ export class UIPropertyOptions {
    * define a prefix text that displayed right next to the value.
    */
   prefix: string;
+
   /**
    * define a suffix text that displayed right next to the value.
    */
@@ -35,6 +36,7 @@ export class UIPropertyOptions {
    * define the associated form input is visible or not.
    */
   hideInput: boolean;
+
   /**
    * define the associated table column is visible or not.
    */

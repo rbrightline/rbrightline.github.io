@@ -1,5 +1,5 @@
 import { ObjectValidationOptions } from '@rline/type';
-import { IsObject, ValidationOptions } from 'class-validator';
+import { IsObject, ValidateNested, ValidationOptions } from 'class-validator';
 import { Type } from 'class-transformer';
 
 /**
@@ -9,13 +9,13 @@ import { Type } from 'class-transformer';
  * @returns {@link PropertyDecorator}
  */
 export function ObjectValidation(
-  options: ObjectValidationOptions,
+  options: Partial<ObjectValidationOptions>,
   vo: ValidationOptions
 ): PropertyDecorator {
   return (t, p) => {
     if (!options.target) throw new Error('target option is required!');
-
     IsObject(vo)(t, p);
     Type(options.target)(t, p);
+    ValidateNested(vo)(t, p);
   };
 }

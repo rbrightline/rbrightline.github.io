@@ -9,19 +9,19 @@ import { StringValidationOptions } from './string';
 /**
  * @ignore
  */
-export type PrimitiveValidationOptions = Partial<
-  CommonValidationOptions &
-    (
-      | BooleanValidationOptions
-      | DateValidationOptions
-      | NumberValidationOptions
-      | ObjectValidationOptions
-      | StringValidationOptions
-    )
+export type RawPrimitiveOptions = Partial<
+  | BooleanValidationOptions
+  | DateValidationOptions
+  | NumberValidationOptions
+  | ObjectValidationOptions
+  | StringValidationOptions
 >;
 
+/**
+ * @ignore
+ */
 export type ArrayValidationOptions =
-  __ArrayValidationOptions<PrimitiveValidationOptions>;
+  __ArrayValidationOptions<RawPrimitiveOptions>;
 
 /**
  * Property validation options
@@ -84,5 +84,5 @@ export type ArrayValidationOptions =
  *
  */
 export type ValidationOptions = Partial<
-  PrimitiveValidationOptions | ArrayValidationOptions
+  CommonValidationOptions & (RawPrimitiveOptions | ArrayValidationOptions)
 >;

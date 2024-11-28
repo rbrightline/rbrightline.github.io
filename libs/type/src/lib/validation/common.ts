@@ -3,11 +3,6 @@
  */
 export class CommonValidationOptions {
   /**
-   * define the value is `array` or not.
-   */
-  isArray: boolean;
-
-  /**
    * define the property is `required` or not.
    */
   required: boolean;
@@ -31,4 +26,9 @@ export class CommonValidationOptions {
    * define the property is excluded or not.
    */
   exclude: boolean;
+
+  /**
+   * define the property that this property's value should not be same as that property's value
+   */
+  notSameAs: string;
 }
