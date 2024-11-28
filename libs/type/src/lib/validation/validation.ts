@@ -1,4 +1,4 @@
-import { ArrayValidationOptions } from './array';
+import { __ArrayValidationOptions } from './array';
 import { BooleanValidationOptions } from './boolean';
 import { CommonValidationOptions } from './common';
 import { DateValidationOptions } from './date';
@@ -19,6 +19,9 @@ export type PrimitiveValidationOptions = Partial<
       | StringValidationOptions
     )
 >;
+
+export type ArrayValidationOptions =
+  __ArrayValidationOptions<PrimitiveValidationOptions>;
 
 /**
  * Property validation options
@@ -81,6 +84,5 @@ export type PrimitiveValidationOptions = Partial<
  *
  */
 export type ValidationOptions = Partial<
-  | PrimitiveValidationOptions
-  | ArrayValidationOptions<PrimitiveValidationOptions>
+  PrimitiveValidationOptions | ArrayValidationOptions
 >;

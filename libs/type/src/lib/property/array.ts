@@ -1,6 +1,6 @@
-import { ArrayValidationOptions } from '../validation/array';
+import { __ArrayValidationOptions } from '../validation/array';
 
 /**
  * Array property options
  */
-export class ArrayPropertyOptions<T> extends ArrayValidationOptions<T> {}
+export class ArrayPropertyOptions<T> extends __ArrayValidationOptions<T> {}

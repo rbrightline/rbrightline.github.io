@@ -189,6 +189,9 @@ importers:
 
   libs/validation:
     dependencies:
+      '@rline/type':
+        specifier: workspace:^
+        version: link:../type
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
