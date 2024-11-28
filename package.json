@@ -7,6 +7,7 @@
     "email": "robert.brightline@gmail.com",
     "url": "https://rbrightline.github.io"
   },
+  "description": "@rline libraries",
   "repository": {
     "directory": ".",
     "type": "github",
