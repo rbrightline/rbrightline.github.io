@@ -9,6 +9,7 @@ export * from './lib/custom/more-than-date';
 export * from './lib/custom/more-than';
 export * from './lib/custom/past-date';
 export * from './lib/date';
+export * from './lib/dto';
 export * from './lib/number';
 export * from './lib/object';
 export * from './lib/string';

@@ -88,4 +88,9 @@ export class CommonPropertyOptions extends CommonValidationOptions {
    * define a tooltip text displayed when hover over the input element
    */
   tooltip: string;
+
+  /**
+   * define the property can be updated or not.
+   */
+  update: boolean;
 }
