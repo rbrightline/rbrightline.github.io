@@ -1,4 +1,6 @@
 // @index(['./**/*.ts', '!./**/*.{spec,test,story,stories}.ts'], f => `export * from '${f.path}'`)
+export * from './lib/base/entity';
+export * from './lib/base/view';
 export * from './lib/common/column-type';
 export * from './lib/decorators/array';
 export * from './lib/decorators/boolean';

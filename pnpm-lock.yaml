@@ -111,6 +111,9 @@ importers:
 
   libs/entity:
     dependencies:
+      '@rline/orm':
+        specifier: ^2.0.1
+        version: 2.0.1(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -1571,6 +1574,9 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+
+  '@rline/orm@2.0.1':
+    resolution: {integrity: sha512-OZtO3I2Nmg9WzIFKtlsG0a6mNzVexcz6R9vJKChupGW4WwYV4UPWv6S/Tji1y4w7AoiONWB76o4Xxb+gQuEWYg==}
 
   '@rline/path@2.0.1':
     resolution: {integrity: sha512-JbxWehBa21z0eaKMHG2V+hLdCAIED7wE6KEyzSi4lCiThdw++ShDRW5XRvfdVznex50TnTLKr5a01AxeeH+ChQ==}
@@ -6727,6 +6733,43 @@ snapshots:
     optional: true
 
   '@polka/url@1.0.0-next.28': {}
+
+  '@rline/orm@2.0.1(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))':
+    dependencies:
+      '@rline/property': 2.0.1(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+      '@rline/type': 2.0.1
+      '@rline/validation': 2.0.1
+      '@swc/helpers': 0.5.15
+    optionalDependencies:
+      '@nestjs/common': 10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/config': 3.3.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(rxjs@7.8.1)
+      '@nestjs/typeorm': 10.0.2(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.20(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4)))
+      typeorm: 0.3.20(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(typescript@5.5.4))
+    transitivePeerDependencies:
+      - '@fastify/static'
+      - '@google-cloud/spanner'
+      - '@nestjs/core'
+      - '@sap/hana-client'
+      - better-sqlite3
+      - class-transformer
+      - class-validator
+      - hdb-pool
+      - ioredis
+      - mongodb
+      - mssql
+      - mysql2
+      - oracledb
+      - pg
+      - pg-native
+      - pg-query-stream
+      - redis
+      - reflect-metadata
+      - rxjs
+      - sql.js
+      - sqlite3
+      - supports-color
+      - ts-node
+      - typeorm-aurora-data-api-driver
 
   '@rline/path@2.0.1':
     dependencies:
