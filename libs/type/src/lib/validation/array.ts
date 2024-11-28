@@ -1,7 +1,7 @@
 /**
  * Array property validation options.
  */
-export class __ArrayValidationOptions<T> {
+export class ArrayValidationOptions<T> {
   /**
    * property type
    */

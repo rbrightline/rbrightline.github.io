@@ -1,30 +1,7 @@
-import { __ArrayValidationOptions } from './array';
-import { BooleanValidationOptions } from './boolean';
+import { __ValidationOptions } from './__validation';
+import { ArrayValidationOptions } from './array';
 import { CommonValidationOptions } from './common';
-import { DateValidationOptions } from './date';
-import { NumberValidationOptions } from './number';
-import { ObjectValidationOptions } from './object';
-import { StringValidationOptions } from './string';
-
-/**
- * @ignore
- */
-export type RawPrimitiveOptions = Partial<
-  CommonValidationOptions &
-    (
-      | BooleanValidationOptions
-      | DateValidationOptions
-      | NumberValidationOptions
-      | ObjectValidationOptions
-      | StringValidationOptions
-    )
->;
-
-/**
- * @ignore
- */
-export type ArrayValidationOptions =
-  __ArrayValidationOptions<RawPrimitiveOptions>;
+import { PrimitiveValiatinoOptions } from './primitive';
 
 /**
  * Property validation options
@@ -87,5 +64,6 @@ export type ArrayValidationOptions =
  *
  */
 export type ValidationOptions = Partial<
-  CommonValidationOptions & (RawPrimitiveOptions | ArrayValidationOptions)
+  CommonValidationOptions &
+    (PrimitiveValiatinoOptions | ArrayValidationOptions<__ValidationOptions>)
 >;

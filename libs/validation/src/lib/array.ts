@@ -1,4 +1,4 @@
-import { ArrayValidationOptions } from '@rline/type';
+import { ArrayValidationOptions, ValidationOptions } from '@rline/type';
 import { IsArray, ArrayMaxSize, ArrayUnique } from 'class-validator';
 
 /**
@@ -8,7 +8,7 @@ import { IsArray, ArrayMaxSize, ArrayUnique } from 'class-validator';
  * @returns property decorator {@link PropertyDecorator}
  */
 export function ArrayValidation(
-  options: Partial<ArrayValidationOptions>
+  options: Partial<ArrayValidationOptions<ValidationOptions>>
 ): PropertyDecorator {
   return (t, p) => {
     IsArray()(t, p);

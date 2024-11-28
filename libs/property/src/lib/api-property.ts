@@ -79,7 +79,7 @@ export function toApiProeprtyOptions(
       return {
         ...commonOptions,
         items: {
-          // ...toApiProeprtyOptions(items),
+          ...toApiProeprtyOptions(options.items as any),
         },
       } as unknown as ApiPropertyOptions;
     }

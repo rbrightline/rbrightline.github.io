@@ -61,4 +61,6 @@ import { CommonPropertyOptions } from './common';
  * ````
  *
  */
-export type PropertyOptions = ValidationOptions & CommonPropertyOptions;
+export type PropertyOptions = Partial<
+  ValidationOptions & Partial<CommonPropertyOptions>
+>;

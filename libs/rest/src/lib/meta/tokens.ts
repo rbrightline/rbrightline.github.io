@@ -1,0 +1,14 @@
+/**
+ * Metadata tokens
+ */
+export enum MetadataTokens {
+  ADMIN = 'ADMIN_RESOURCE_TOKEN',
+
+  ROLE = 'REQUIRED_ROLE_TOKEN',
+
+  PUBLIC = 'PUBLIC_RESOURCE_TOKEN',
+
+  OPERATION_NAME = 'OPERATION_NAME_TOKEN',
+
+  RESOURCE_NAME = `RESOURCE_NAME_TOKEN`,
+}
