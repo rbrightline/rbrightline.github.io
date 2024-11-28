@@ -6,9 +6,18 @@ import { QUERY_PATTERN } from './query-pattern';
  * @returns {boolean} if the query string is valid, then return `true` else `false`.
  *
  * ````typescript
- * isQueryString('sample'); // output: false
- * isQueryString('some:some'); // output: false
- * isQueryString('eq:some'); // output: true
+ * let result = isQueryString('sample');
+ * assert(result == false)
+ * ````
+ *
+ * ````typescript
+ * let result = isQueryString('ch:');
+ * assert(result == false)
+ * ````
+ *
+ * ````typescript
+ * let result = isQueryString('ch:some');
+ * assert(result == true)
  * ````
  */
 export function isQueryString(value: string): boolean {
