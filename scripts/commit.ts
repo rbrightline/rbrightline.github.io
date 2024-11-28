@@ -1,7 +1,6 @@
 #!/usr/bin/env ts-node
 
 import { tags } from './constant/tags';
-
 import q from 'inquirer';
 import { execSync } from 'child_process';
 import { modules } from './constant/modules';
@@ -25,4 +24,8 @@ q.prompt([
 
   execSync('git add .');
   execSync(`git commit -m"${message}"`);
+
+  // if (push == true) {
+  //   execSync('git push');
+  // }
 });
