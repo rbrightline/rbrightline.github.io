@@ -1,0 +1,16 @@
+import { Controller, Get } from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
+import { ApiOkResponse, ApiOperation, ApiTags } from "@nestjs/swagger";
+
+
+@ApiTags(AppController.name)
+@Controller()
+export class AppController {
+    constructor(protected readonly configService: ConfigService) { }
+
+    @ApiOperation({ summary: "Get application name" })
+    @Get("name")
+    @ApiOkResponse({ description: "successful" })
+    name() { return this.configService.get("NAME") }
+
+}

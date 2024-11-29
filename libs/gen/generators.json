@@ -9,6 +9,11 @@
       "factory": "./src/generators/client/generator",
       "schema": "./src/generators/client/schema.json",
       "description": "client generator"
+    },
+    "api": {
+      "factory": "./src/generators/api/generator",
+      "schema": "./src/generators/api/schema.json",
+      "description": "api generator"
     }
   }
 }
