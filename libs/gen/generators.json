@@ -4,6 +4,11 @@
       "factory": "./src/generators/lib/generator",
       "schema": "./src/generators/lib/schema.json",
       "description": "lib generator"
+    },
+    "client": {
+      "factory": "./src/generators/client/generator",
+      "schema": "./src/generators/client/schema.json",
+      "description": "client generator"
     }
   }
 }
