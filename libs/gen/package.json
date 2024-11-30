@@ -1,6 +1,6 @@
 {
   "name": "@rline/gen",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -45,12 +45,12 @@
             {
               "input": "libs/gen/src/generators",
               "glob": "**/*.template",
-              "output": "."
+              "output": "src/generators"
             },
             {
               "input": "libs/gen/src/generators",
               "glob": "**/*.json",
-              "output": "."
+              "output": "src/generators"
             }
           ]
         }
