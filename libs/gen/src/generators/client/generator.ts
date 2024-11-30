@@ -16,6 +16,7 @@ export async function clientGenerator(
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, {
     ...names(options.name)
   });
+  
   await formatFiles(tree);
 }
 
