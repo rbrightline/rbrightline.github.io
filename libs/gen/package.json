@@ -27,7 +27,8 @@
   "files": [
     "dist",
     "generators.json",
-    "!**/*.tsbuildinfo"
+    "!**/*.tsbuildinfo", 
+    "generators/*/schema.json"
   ],
   "nx": {
     "sourceRoot": "libs/gen/src",
