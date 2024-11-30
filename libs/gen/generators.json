@@ -1,23 +1,23 @@
 {
   "generators": {
     "lib": {
-      "factory": "./src/generators/lib/generator",
-      "schema": "./src/generators/lib/schema.json",
+      "factory": "./lib/generator",
+      "schema": "./lib/schema.json",
       "description": "lib generator"
     },
     "client": {
-      "factory": "./src/generators/client/generator",
-      "schema": "./src/generators/client/schema.json",
+      "factory": "./client/generator",
+      "schema": "./client/schema.json",
       "description": "client generator"
     },
     "api": {
-      "factory": "./src/generators/api/generator",
-      "schema": "./src/generators/api/schema.json",
+      "factory": "./api/generator",
+      "schema": "./api/schema.json",
       "description": "api generator"
     },
     "material": {
-      "factory": "./src/generators/material/generator",
-      "schema": "./src/generators/material/schema.json",
+      "factory": "./material/generator",
+      "schema": "./material/schema.json",
       "description": "material generator"
     }
   }
