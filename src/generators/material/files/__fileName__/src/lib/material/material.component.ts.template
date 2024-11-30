@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'rl-material',
+  standalone: true,
+  imports: [CommonModule],
+  template: `<p >material works!</p>`,
+  styles: ``,
+})
+export class MaterialComponent { }

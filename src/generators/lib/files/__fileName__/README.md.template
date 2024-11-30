@@ -1,0 +1,16 @@
+# <%- fileName %>
+
+### Install 
+
+`pnpm add @rline/<%- fileName %>`
+
+### Summary
+
+### Examples
+
+### Doc
+
+[Documentation](https://rbrightline.github.io/docs/<%- fileName %>)
+
+
+
