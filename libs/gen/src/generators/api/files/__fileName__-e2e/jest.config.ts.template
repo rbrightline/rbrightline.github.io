@@ -1,5 +1,5 @@
 export default {
-  displayName: '__fileName__-e2e',
+  displayName: '<%- fileName %>-e2e',
   preset: '../../jest.preset.js',
   globalSetup: '<rootDir>/src/support/global-setup.ts',
   globalTeardown: '<rootDir>/src/support/global-teardown.ts',
@@ -14,5 +14,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/__fileName__-e2e',
+  coverageDirectory: '../../coverage/<%- fileName %>-e2e',
 };

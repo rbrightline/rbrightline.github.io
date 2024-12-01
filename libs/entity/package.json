@@ -1,6 +1,6 @@
 {
   "name": "@rline/entity",
-  "version": "2.11.0",
+  "version": "2.12.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -14,7 +14,7 @@
     "url": "https://rbrightline.github.io"
   },
   "dependencies": {
-    "@rline/orm": "^2.11.0",
+    "@rline/orm": "^2.12.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
