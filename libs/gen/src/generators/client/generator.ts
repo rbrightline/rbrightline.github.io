@@ -1,11 +1,6 @@
-import {
-  formatFiles,
-  generateFiles,
-  names,
-  Tree,
-} from '@nx/devkit';
-import * as path from 'path';
+import { formatFiles, generateFiles, names, Tree } from '@nx/devkit';
 import { ClientGeneratorSchema } from './schema';
+import { join } from 'path';
 
 export async function clientGenerator(
   tree: Tree,
@@ -13,10 +8,10 @@ export async function clientGenerator(
 ) {
   const projectRoot = `apps`;
 
-  generateFiles(tree, path.join(__dirname, 'files'), projectRoot, {
-    ...names(options.name)
+  generateFiles(tree, join(__dirname, 'files'), projectRoot, {
+    ...names(options.name),
   });
-  
+
   await formatFiles(tree);
 }
 
