@@ -3,22 +3,59 @@
   "compileOnSave": false,
   "files": [],
   "references": [
-    { "path": "./libs/auth" },
-    { "path": "./libs/const" },
-    { "path": "./libs/controller" },
-    { "path": "./libs/email" },
-    { "path": "./libs/entity" },
-    { "path": "./libs/factory" },
-    { "path": "./libs/gen" },
-    { "path": "./libs/graph" },
-    { "path": "./libs/model" },
-    { "path": "./libs/orm" },
-    { "path": "./libs/path" },
-    { "path": "./libs/property" },
-    { "path": "./libs/rest" },
-    { "path": "./libs/type" },
-    { "path": "./libs/util" },
-    { "path": "./libs/validation" },
-    { "path": "./libs/query" }
+    {
+      "path": "./libs/auth"
+    },
+    {
+      "path": "./libs/const"
+    },
+    {
+      "path": "./libs/controller"
+    },
+    {
+      "path": "./libs/email"
+    },
+    {
+      "path": "./libs/entity"
+    },
+    {
+      "path": "./libs/factory"
+    },
+    {
+      "path": "./libs/gen"
+    },
+    {
+      "path": "./libs/graph"
+    },
+    {
+      "path": "./libs/model"
+    },
+    {
+      "path": "./libs/orm"
+    },
+    {
+      "path": "./libs/path"
+    },
+    {
+      "path": "./libs/property"
+    },
+    {
+      "path": "./libs/rest"
+    },
+    {
+      "path": "./libs/type"
+    },
+    {
+      "path": "./libs/util"
+    },
+    {
+      "path": "./libs/validation"
+    },
+    {
+      "path": "./libs/query"
+    },
+    {
+      "path": "./libs/json"
+    }
   ]
 }

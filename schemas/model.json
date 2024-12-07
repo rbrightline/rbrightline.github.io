@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ModelSchema",
+  "title": "Model Schema",
+  "description": "Data model schema",
+  "properties": {
+    "properties": {
+      "patternProperties": {
+        "[a-zA-Z]": {
+          "$ref": "./property/property.json"
+        }
+      },
+      "propertyNames": {
+        "$ref": "./names/property.json"
+      }
+    }
+  }
+}
