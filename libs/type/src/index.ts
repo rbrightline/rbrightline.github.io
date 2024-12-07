@@ -1,6 +1,7 @@
 // @index(['./**/*.ts', '!./**/*.{spec,test,story,stories}.ts'], f => `export * from '${f.path}'`)
 export * from './lib/common/class-constructor';
 export * from './lib/common/icon';
+export * from './lib/common/input-type';
 export * from './lib/common/property-type';
 export * from './lib/property/common';
 export * from './lib/property/property';

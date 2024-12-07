@@ -1,6 +1,6 @@
 {
   "name": "@rline/orm",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -20,9 +20,9 @@
     "typeorm": "^0.3.20"
   },
   "dependencies": {
-    "@rline/property": "2.13.0",
-    "@rline/type": "2.13.0",
-    "@rline/validation": "2.13.0",
+    "@rline/property": "2.14.0",
+    "@rline/type": "workspace:*",
+    "@rline/validation": "2.14.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
@@ -57,5 +57,9 @@
       }
     },
     "name": "orm"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^11.6.0",
+    "pg": "^8.13.1"
   }
 }

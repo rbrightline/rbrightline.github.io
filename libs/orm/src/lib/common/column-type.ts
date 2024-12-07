@@ -7,7 +7,7 @@ export function columnType(type: PropertyType): ColumnType {
   } else if (type === 'boolean') {
     return 'boolean';
   } else if (type === 'date') {
-    return 'timestamp';
+    return 'integer';
   } else if (type === 'number') {
     return 'numeric';
   } else if (type === 'object') {

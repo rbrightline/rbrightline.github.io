@@ -1,3 +1,5 @@
+import { ClassConstructor } from '../common/class-constructor';
+
 export type RelationType =
   | 'many-to-many'
   | 'many-to-one'
@@ -14,4 +16,6 @@ export type RelationOptions = Partial<{
   cascade: boolean;
   onDelete: CascadeType;
   onUpdate: CascadeType;
+  eager: boolean;
+  target: () => ClassConstructor;
 }>;

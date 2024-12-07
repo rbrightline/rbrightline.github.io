@@ -1,3 +1,5 @@
+import { Icon } from '../common/icon';
+import { InputType } from '../common/input-type';
 import { CommonValidationOptions } from '../validation/common';
 
 /**
@@ -52,12 +54,12 @@ export class CommonPropertyOptions extends CommonValidationOptions {
   /**
    * define a prefix `icon` that displayed right next to the input element.
    */
-  prefixIcon: string;
+  prefixIcon: Icon;
 
   /**
    * define a suffix `icon` that displayed right next to the input element.
    */
-  suffixIcon: string;
+  suffixIcon: Icon;
 
   /**
    * define a hint text that displayed below the input element.
@@ -83,6 +85,8 @@ export class CommonPropertyOptions extends CommonValidationOptions {
    * define the associated form input is disabled or not.
    */
   disabled: boolean;
+
+  inputType: InputType;
 
   /**
    * define a tooltip text displayed when hover over the input element
