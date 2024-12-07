@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Relation Property Schema",
+  "$id": "RelationPropertySchema",
+  "properties": {
+    "type": {
+      "enum": ["one-to-one", "one-to-many", "many-to-many", "many-to-one"]
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "cascade": {
+      "type": "boolean"
+    },
+    "onDelete": {
+      "enum": ["CASCADE", "SET NULL", "NO ACTION"]
+    },
+    "onUpdate": {
+      "enum": ["CASCADE", "SET NULL", "NO ACTION"]
+    },
+    "join": {
+      "type": "boolean"
+    },
+    "target": {
+      "$ref": "./../names/property.json"
+    }
+  }
+}

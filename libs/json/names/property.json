@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PropertyNames",
+  "title": "Property Names",
+  "enum": [
+    "id",
+    "createdAt",
+    "updatedAt",
+    "deletedAt",
+    "active",
+    "status",
+    "tag",
+    "key",
+    "value",
+
+    "name",
+    "description",
+
+    "------------- User -------------",
+
+    "firstName",
+    "lastName",
+    "middleName",
+    "dob",
+    "ssn",
+
+    "---------- Auth ---------------",
+    "username",
+    "password",
+    "sesion",
+    "sso",
+
+    "--------------- Contact -------------",
+    "address",
+    "city",
+    "state",
+    "street",
+    "zip",
+    "email",
+
+    "------------ ",
+
+    "----------- Product ------------",
+    "product",
+    "productDetail",
+    "category",
+    "department",
+    "sku",
+    "quantity",
+    "price",
+    "discount",
+    "priceLevel",
+    "productAttribute",
+
+    "------------ Store -------------",
+    "store",
+    "shelf",
+
+    "-------- User -----------",
+    "user",
+    "userAddress",
+    "userPhone",
+    "userEmail",
+    "userProfile",
+    "userTag",
+
+    "-------- Auth -----------",
+    "role",
+    "permission",
+    "accessToken",
+    "session",
+
+    "-------- Customer -----------",
+    "customer",
+    "customerAddress",
+    "customerPhone",
+    "customerEmail",
+    "customerAcount",
+    "customerTag",
+
+    "---------- Message -------------",
+    "message",
+
+    "--------- Blog --------------",
+    "blog",
+    "article",
+    "comment",
+    "blogTag",
+
+    "----------- Task -----------",
+    "task",
+    "sprint",
+    "project",
+    "taskTag",
+
+    "------------- Work Hours ------------",
+    "clockIn",
+    "clockOut",
+    "startDate",
+    "endDate",
+
+    "workSchedule",
+
+    "------------ Notification ----------",
+    "notification"
+  ]
+}

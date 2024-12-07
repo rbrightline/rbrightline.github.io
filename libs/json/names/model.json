@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Model Names",
+  "$id": "ModelNames",
+  "enum": [
+    "----------- Product ------------",
+    "Product",
+    "ProductDetail",
+    "Category",
+    "Department",
+    "Sku",
+    "Quantity",
+    "Price",
+    "Discount",
+    "PriceLevel",
+    "ProductAttribute",
+
+    "------------ Store -------------",
+    "Store",
+    "Shelf",
+
+    "-------- User -----------",
+    "User",
+    "UserAddress",
+    "UserPhone",
+    "UserEmail",
+    "UserProfile",
+    "UserTag",
+
+    "-------- Auth -----------",
+    "Role",
+    "Permission",
+    "AccessToken",
+    "Session",
+
+    "-------- Customer -----------",
+    "Customer",
+    "CustomerAddress",
+    "CustomerPhone",
+    "CustomerEmail",
+    "CustomerAcount",
+    "CustomerTag",
+
+    "---------- Message -------------",
+    "Message",
+
+    "--------- Blog --------------",
+    "Blog",
+    "Article",
+    "Comment",
+    "BlogTag",
+
+    "----------- Task -----------",
+    "Task",
+    "Sprint",
+    "Project",
+    "TaskTag",
+
+    "------------- Work Hours ------------",
+    "ClockIn",
+    "WorkSchedule",
+
+    "------------ Notification ----------",
+    "Notification"
+  ]
+}

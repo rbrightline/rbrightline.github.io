@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ObjectPropertySchema",
+  "title": "Object Property Schema",
+  "properties": {
+    "type": {
+      "const": "object"
+    },
+    "example": {
+      "type": "object"
+    },
+    "default": {
+      "type": "object"
+    }
+  }
+}

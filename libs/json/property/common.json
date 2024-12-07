@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "CommonPropertySchema",
+  "title": "Common Property Schema",
+  "properties": {
+    "name": {
+      "$ref": "../names/property.json"
+    },
+    "type": {
+      "enum": ["string", "number", "date", "object", "array", "boolean"]
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "unique": {
+      "type": "boolean"
+    },
+    "update": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "boolean"
+    },
+    "encrypt": {
+      "type": "boolean"
+    },
+    "viewAlias": {
+      "type": "string"
+    },
+    "hideInput": {
+      "type": "boolean"
+    },
+    "hideValue": {
+      "type": "boolean"
+    },
+    "disabled": { "type": "boolean" },
+    "inputType": { "$ref": "./../names/input-type.json" },
+    "prefixText": { "type": "string" },
+    "suffixText": { "type": "string" },
+    "prefixIcon": { "$ref": "./../names/icon.json" },
+    "suffixIcon": { "$ref": "./../names/icon.json" }
+  },
+  "required": ["type"]
+}

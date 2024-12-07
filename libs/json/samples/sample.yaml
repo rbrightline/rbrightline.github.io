@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=./../model.json
+properties:
+  name:
+    type: string
+    name: name
+    inputType: text
+    
+relations:
+  category:
+    type: many-to-one
+    join: true

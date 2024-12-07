@@ -13,6 +13,16 @@
       "propertyNames": {
         "$ref": "./names/property.json"
       }
+    },
+    "relations": {
+      "patternProperties": {
+        "[a-zA-Z]": {
+          "$ref": "./property/relation.json"
+        }
+      },
+      "propertyNames": {
+        "$ref": "./names/property.json"
+      }
     }
   }
 }

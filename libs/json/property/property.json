@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    { "$ref": "./common.json" },
+    {
+      "oneOf": [
+        { "$ref": "./string.json" },
+        { "$ref": "./number.json" },
+        { "$ref": "./boolean.json" },
+        { "$ref": "./object.json" },
+        { "$ref": "./array.json" }
+      ]
+    }
+  ]
+}

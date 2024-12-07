@@ -36,6 +36,9 @@ importers:
       '@nx/webpack':
         specifier: 20.1.4
         version: 20.1.4(@babel/traverse@7.25.9)(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.5.4))(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@18.16.9)(nx@20.1.3(@swc-node/register@1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.5.4))(@swc/core@1.5.29(@swc/helpers@0.5.15)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)(verdaccio@5.33.0(typanion@3.14.0))
+      '@rline/json':
+        specifier: ^2.12.1
+        version: 2.12.1
       '@swc-node/register':
         specifier: ~1.9.1
         version: 1.9.2(@swc/core@1.5.29(@swc/helpers@0.5.15))(@swc/types@0.1.17)(typescript@5.5.4)
@@ -151,6 +154,8 @@ importers:
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
+
+  libs/json: {}
 
   libs/model:
     dependencies:
@@ -1839,6 +1844,9 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+
+  '@rline/json@2.12.1':
+    resolution: {integrity: sha512-wJqDpiM2qsgufdTYtablO98alDOrwswM/2Kk0HxZisaeWjwota15DmvyBx4NUKr0Sb30kICurJAZQKk8RKMWcQ==}
 
   '@rline/orm@2.12.1':
     resolution: {integrity: sha512-CUvXnlsFX8UvfBg3thr8Fi2fsqt9ce+aMsrWjRuZ/ZlDYbpZeUeb0gu5DWu3lpOJ9bgqGXOOGa+roNT1jnJZRA==}
@@ -8861,6 +8869,8 @@ snapshots:
     optional: true
 
   '@polka/url@1.0.0-next.28': {}
+
+  '@rline/json@2.12.1': {}
 
   '@rline/orm@2.12.1(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(@types/node@22.10.1)(typescript@5.5.4))':
     dependencies:

@@ -1,40 +1,13 @@
 {
   "name": "@rline/json",
-  "version": "0.0.1",
-  "dependencies": {
-    "@swc/helpers": "~0.5.11"
+  "version": "2.12.1",
+  "author": {
+    "name": "Robert Brightline",
+    "email": "robert.brightline@gmail.com",
+    "url": "https://rbrightline.github.io"
   },
-  "type": "commonjs",
-  "main": "./dist/src/index.js",
-  "typings": "./dist/src/index.d.ts",
-  "files": [
-    "dist",
-    "!**/*.tsbuildinfo"
-  ],
-  "nx": {
-    "sourceRoot": "libs/json/src",
-    "targets": {
-      "build": {
-        "executor": "@nx/js:swc",
-        "outputs": [
-          "{options.outputPath}"
-        ],
-        "options": {
-          "outputPath": "libs/json/dist",
-          "main": "libs/json/src/index.ts",
-          "tsConfig": "libs/json/tsconfig.lib.json"
-        }
-      },
-      "test": {
-        "executor": "@nx/vite:test",
-        "outputs": [
-          "{options.reportsDirectory}"
-        ],
-        "options": {
-          "reportsDirectory": "../../coverage/libs/json"
-        }
-      }
-    },
-    "name": "json"
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
   }
 }

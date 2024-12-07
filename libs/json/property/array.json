@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ArrayPropertySchema",
+  "title": "Array Property Schema",
+  "properties": {
+    "type": {
+      "const": "array"
+    },
+    "items": {
+      "$ref": "./property.json"
+    },
+    "default": {
+      "type": "array"
+    }
+  }
+}
