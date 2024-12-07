@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=./../model.json
+properties:
+  name:
+    type: string
+    required: true
+    unique: true

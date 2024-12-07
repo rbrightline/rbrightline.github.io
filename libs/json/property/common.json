@@ -7,28 +7,39 @@
       "$ref": "../names/property.json"
     },
     "type": {
-      "enum": ["string", "number", "date", "object", "array", "boolean"]
+      "enum": ["string", "number", "date", "object", "array", "boolean"],
+      "default": "string"
     },
     "required": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "unique": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "update": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "description": {
+      "type": "string",
+      "default": "Describe the property"
+    },
+    "label": {
       "type": "string"
     },
     "hint": {
-      "type": "string"
+      "type": "string",
+      "default": "Describe the input"
     },
     "hash": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "encrypt": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "viewAlias": {
       "type": "string"
@@ -37,14 +48,16 @@
       "type": "boolean"
     },
     "hideValue": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
-    "disabled": { "type": "boolean" },
-    "inputType": { "$ref": "./../names/input-type.json" },
-    "prefixText": { "type": "string" },
-    "suffixText": { "type": "string" },
-    "prefixIcon": { "$ref": "./../names/icon.json" },
-    "suffixIcon": { "$ref": "./../names/icon.json" }
+
+    "disabled": { "type": "boolean", "default": true },
+    "inputType": { "$ref": "./../names/input-type.json", "default": "text" },
+    "prefixText": { "type": "string", "default": "Add prefix text" },
+    "suffixText": { "type": "string", "default": "Add suffix text" },
+    "prefixIcon": { "$ref": "./../names/icon.json", "default": "info" },
+    "suffixIcon": { "$ref": "./../names/icon.json", "default": "info" }
   },
   "required": ["type"]
 }
