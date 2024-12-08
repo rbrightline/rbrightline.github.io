@@ -1,6 +1,6 @@
 {
   "name": "@rline/entity",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -18,9 +18,9 @@
     "@nestjs/swagger": "^8.0.7"
   },
   "dependencies": {
-    "@rline/model": "workspace:^",
-    "@rline/orm": "workspace:^",
-    "@rline/property": "workspace:^",
+    "@rline/model": "workspace:*",
+    "@rline/orm": "workspace:*",
+    "@rline/property": "workspace:*",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",

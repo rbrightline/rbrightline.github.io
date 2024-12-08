@@ -8,7 +8,7 @@ export class Category extends IDEntity {}
 
 @Dto()
 export class CreateCategoryDto implements CreateCategoryModel {
-  @Property({ type: 'string', required: true })
+  @Property({ type: 'string', required: true, format: 'short' })
   name: string;
 }
 

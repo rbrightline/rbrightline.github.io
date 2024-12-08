@@ -53,9 +53,6 @@
     },
     {
       "path": "./libs/query"
-    },
-    {
-      "path": "./libs/json"
     }
   ]
 }

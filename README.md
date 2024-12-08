@@ -16,6 +16,7 @@ All libraries used accross the rline projects
 - [@rline/graph] (https://rbrightline.github.io/docs/graph)
 - [@rline/model] (https://rbrightline.github.io/docs/model)
 - [@rline/orm] (https://rbrightline.github.io/docs/orm)
+- [@rline/json] (https://rbrightline.github.io/docs/json)
 - [@rline/path] (https://rbrightline.github.io/docs/path)
 - [@rline/property] (https://rbrightline.github.io/docs/property)
 - [@rline/rest] (https://rbrightline.github.io/docs/rest)
