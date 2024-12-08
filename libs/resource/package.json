@@ -1,13 +1,12 @@
 {
-  "name": "@rline/type",
-  "version": "2.16.1",
-  "description": "Rline libraries",
+  "name": "@rline/resource",
+  "version": "2.16.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
   },
   "keywords": [
-    "type"
+    "entity"
   ],
   "author": {
     "name": "Robert Brightline",
@@ -15,6 +14,9 @@
     "url": "https://rbrightline.github.io"
   },
   "dependencies": {
+    "@nestjs/common": "^10.4.11",
+    "@rline/path": "workspace:^",
+    "@rline/rest": "workspace:^",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
@@ -25,7 +27,7 @@
     "!**/*.tsbuildinfo"
   ],
   "nx": {
-    "sourceRoot": "libs/type/src",
+    "sourceRoot": "libs/resource/src",
     "targets": {
       "build": {
         "executor": "@nx/js:swc",
@@ -33,9 +35,9 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "libs/type/dist",
-          "main": "libs/type/src/index.ts",
-          "tsConfig": "libs/type/tsconfig.lib.json"
+          "outputPath": "libs/resource/dist",
+          "main": "libs/resource/src/index.ts",
+          "tsConfig": "libs/resource/tsconfig.lib.json"
         }
       },
       "test": {
@@ -44,10 +46,10 @@
           "{options.reportsDirectory}"
         ],
         "options": {
-          "reportsDirectory": "../../coverage/libs/type"
+          "reportsDirectory": "../../coverage/libs/resource"
         }
       }
     },
-    "name": "type"
+    "name": "resource"
   }
 }

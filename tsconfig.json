@@ -53,6 +53,9 @@
     },
     {
       "path": "./libs/query"
+    },
+    {
+      "path": "./libs/resource"
     }
   ]
 }

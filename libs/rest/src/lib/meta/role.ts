@@ -7,6 +7,7 @@ import { MetadataTokens } from './tokens';
  * @returns method or class level decorator {@link CustomDecorator}
  */
 export function RequiredRole(role: string): CustomDecorator {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return ((t: any, p?: any, d?: any) => {
     SetMetadata(MetadataTokens.ROLE, role)(t, p, d);
   }) as unknown as CustomDecorator;
