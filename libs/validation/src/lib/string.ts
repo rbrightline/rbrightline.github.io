@@ -1,4 +1,8 @@
-import { StringFormat, StringValidationOptions } from '@rline/type';
+import {
+  StringFormat,
+  StringFormats,
+  StringValidationOptions,
+} from '@rline/type';
 import {
   IsEAN,
   IsEmail,
@@ -23,7 +27,7 @@ import {
  * @returns property decorator {@link PropertyDecorator}
  */
 export function StringFormatValidation(
-  format: StringFormat,
+  format: StringFormats,
   vo: ValidationOptions
 ): PropertyDecorator {
   return (t, p) => {

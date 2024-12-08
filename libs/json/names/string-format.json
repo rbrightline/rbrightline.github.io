@@ -2,6 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "StringFormat",
   "title": "String Format",
+
+  "description": "String format like email, password, ip for validation",
   "enum": [
     "email",
     "password",

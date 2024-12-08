@@ -1,4 +1,4 @@
-import { StringFormat } from './string-format';
+import { StringFormats } from './string-format';
 
 /**
  * String property validation options
@@ -22,7 +22,7 @@ export class StringValidationOptions {
   /**
    * define the `format` of the string {@link StringFormat}.
    */
-  format: StringFormat;
+  format: StringFormats;
 
   /**
    * define the `pattern` of the string

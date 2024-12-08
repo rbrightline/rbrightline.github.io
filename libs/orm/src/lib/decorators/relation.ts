@@ -7,11 +7,12 @@ import {
   OneToOne,
   RelationOptions as TypeormRelationOptions,
 } from 'typeorm';
-import { BaseEntity } from '../base/entity';
+
 import { Property } from '@rline/property';
 import { RelationOptions } from '@rline/type';
+import { IDEntity } from '../base/id';
 
-export function Relation<T extends BaseEntity>(
+export function Relation<T extends IDEntity>(
   options: RelationOptions
 ): PropertyDecorator {
   return (t, p) => {

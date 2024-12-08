@@ -4,7 +4,16 @@
   "title": "Model Schema",
   "description": "Data model schema",
   "properties": {
+    "extends": {
+      "enum": ["ID", "Timestamps", "Active"],
+      "description": "There are 3 type of base entities. ID (id ), Timestamps, extends ID,  ( createdAt, updatedAt, deletedAt), Active, extends Timestamps, ( active)"
+    },
+    "name": {
+      "description": "Model name",
+      "$ref": "./names/model.json"
+    },
     "properties": {
+      "description": "Model properties",
       "patternProperties": {
         "[a-zA-Z]": {
           "$ref": "./property/property.json"
@@ -15,6 +24,7 @@
       }
     },
     "relations": {
+      "description": "Model relations",
       "patternProperties": {
         "[a-zA-Z]": {
           "$ref": "./property/relation.json"

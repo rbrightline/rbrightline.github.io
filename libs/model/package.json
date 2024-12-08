@@ -14,6 +14,7 @@
     "url": "https://rbrightline.github.io"
   },
   "dependencies": {
+    "@rline/type": "workspace:^",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",
