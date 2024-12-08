@@ -2,8 +2,8 @@
 
 import q from 'inquirer';
 import { libs } from './constant/libs';
-import { chdir } from 'process';
 import { join } from 'path';
+import { chdir } from 'process';
 import { execSync } from 'child_process';
 
 q.prompt([
@@ -14,7 +14,7 @@ q.prompt([
     choices: libs(),
   },
 ]).then(({ lib }) => {
-  chdir(join(__dirname, '..', 'libs', lib));
-  execSync('npx nx build');
-  execSync('')
+  const ROOT = join(__dirname, '..', 'libs', lib);
+  chdir(ROOT);
+  execSync('npm publish');
 });

@@ -24,8 +24,4 @@ q.prompt([
   const ROOT = join(__dirname, '..', 'libs', lib);
   const PACKAGE_JSON = join(ROOT, 'package.json');
   updateVersion(PACKAGE_JSON, versionType);
-
-  chdir(ROOT);
-  execSync('npx nx build');
-  execSync('npm publish');
 });
