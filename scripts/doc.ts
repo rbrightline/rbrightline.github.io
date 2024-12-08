@@ -1,5 +1,7 @@
 #!/usr/bin/env ts-node
-
+/**
+ * Generate compodoc for a specific library
+ */
 // compodoc -p tsconfig.doc.json
 
 import q from 'inquirer';

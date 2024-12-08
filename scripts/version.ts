@@ -1,10 +1,10 @@
 #!/usr/bin/env ts-node
-
+/**
+ * Update the version of a specific library by name and version type (patch, minor, major).
+ */
 import q from 'inquirer';
 import { libs } from './constant/libs';
-import { chdir } from 'process';
 import { join } from 'path';
-import { execSync } from 'child_process';
 import { updateVersion } from './helpers/update-version';
 
 q.prompt([

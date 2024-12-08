@@ -182,14 +182,14 @@ importers:
   libs/orm:
     dependencies:
       '@rline/property':
-        specifier: 2.16.0
-        version: 2.16.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+        specifier: workspace:^
+        version: link:../property
       '@rline/type':
-        specifier: 2.16.0
-        version: 2.16.0
+        specifier: workspace:*
+        version: link:../type
       '@rline/validation':
-        specifier: 2.16.0
-        version: 2.16.0
+        specifier: workspace:^
+        version: link:../validation
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.15
@@ -1888,9 +1888,6 @@ packages:
 
   '@rline/path@2.16.0':
     resolution: {integrity: sha512-/NC0bqdGoJjxZr/hs27ms6PgBx9xCgIZKyRRZtrVeJfVoyKmAgWg3KX6iUZd9EoIqlv9dl7iWiKt5YK8ZpYavw==}
-
-  '@rline/property@2.16.0':
-    resolution: {integrity: sha512-oWNi1+ATLYWoNstgDI3m4aNEkUI6TdL63c6BhCt9m+OmQg1pQ7lR8vaGxjSBN0wDNXP5byYhr5HfyZGfKkyGYw==}
 
   '@rline/type@2.16.0':
     resolution: {integrity: sha512-jXdxCFcehLp9yX6RaGESpW3NZbvrs8koe4kHPEa0J6DEG97CLKYfJJ9ZOdg2sW3XyU9rP2BIIulUZRO6TIPu6w==}
@@ -9017,21 +9014,6 @@ snapshots:
   '@rline/path@2.16.0':
     dependencies:
       '@swc/helpers': 0.5.15
-
-  '@rline/property@2.16.0(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)':
-    dependencies:
-      '@rline/type': 2.16.0
-      '@rline/validation': 2.16.0
-      '@swc/helpers': 0.5.15
-    optionalDependencies:
-      '@nestjs/swagger': 8.0.7(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.11(@nestjs/common@10.4.11(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
-    transitivePeerDependencies:
-      - '@fastify/static'
-      - '@nestjs/common'
-      - '@nestjs/core'
-      - class-transformer
-      - class-validator
-      - reflect-metadata
 
   '@rline/type@2.16.0':
     dependencies:

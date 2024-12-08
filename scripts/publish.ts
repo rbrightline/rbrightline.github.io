@@ -1,10 +1,12 @@
 #!/usr/bin/env ts-node
+/**
+ * Build and publish a specific library by name
+ */
 
 import q from 'inquirer';
 import { libs } from './constant/libs';
-import { join } from 'path';
-import { chdir } from 'process';
-import { execSync } from 'child_process';
+import { build } from './helpers/build';
+import { publish } from './helpers/publish';
 
 q.prompt([
   {
@@ -14,7 +16,6 @@ q.prompt([
     choices: libs(),
   },
 ]).then(({ lib }) => {
-  const ROOT = join(__dirname, '..', 'libs', lib);
-  chdir(ROOT);
-  execSync('npm publish');
+  build(lib);
+  publish(lib);
 });

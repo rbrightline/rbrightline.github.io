@@ -1,5 +1,7 @@
 #!/usr/bin/env ts-node
-
+/**
+ * Keep the commit message consistance appling the template '[lib] [tag] message'.
+ */
 import { tags } from './constant/tags';
 import q from 'inquirer';
 import { execSync } from 'child_process';
