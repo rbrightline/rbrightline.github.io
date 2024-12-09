@@ -1,5 +1,28 @@
-import { RestResourceBuilder } from '@rline/rest';
+import {
+  RestResourceBuilder,
+  Params,
+  BodyParams,
+  QueryParams,
+  IDParam,
+} from '@rline/rest';
 import { ResourcePathBuilder } from '@rline/path';
+
+import {
+  Category,
+  CategoryView,
+  CreateCategoryDto,
+  QueryCategoryDto,
+  UpdateCategoryDto,
+} from '@rline/entity';
+import {
+  AddRelationDto,
+  CommonQueryDto,
+  InjectResourceService,
+  RemoveRelationDto,
+  ResourceService,
+  SetRelationDto,
+  UnsetRelationDto,
+} from '@rline/orm';
 
 export const CategoryPaths = new ResourcePathBuilder({
   singular: 'category',
@@ -12,58 +35,57 @@ export const CategoryResource = new RestResourceBuilder({
 
 @CategoryResource.Controller()
 export class CategoryController {
-  @CategoryResource.AddRelation()
-  addRelation() {
-    return 'addRelation';
-  }
+  constructor(
+    @InjectResourceService(Category)
+    protected readonly service: ResourceService<Category>,
+    @InjectResourceService(CategoryView)
+    protected readonly viewService: ResourceService<Category>
+  ) {}
 
-  @CategoryResource.Count()
-  count() {
-    return 'count';
-  }
-
-  @CategoryResource.Delete()
-  delete() {
-    return 'delete';
+  @CategoryResource.FindOneById()
+  async findOneById(@IDParam() id: number) {
+    return await this.viewService.findOneById(id);
   }
 
   @CategoryResource.FindAll()
-  findAll() {
-    return 'findAll';
-  }
-
-  @CategoryResource.FindOneById()
-  findOneById() {
-    return 'findOneById';
-  }
-
-  @CategoryResource.Metadata()
-  metadata() {
-    return 'metadata';
-  }
-
-  @CategoryResource.RemoveRelation()
-  removeRelation() {
-    return 'removeRelation';
+  async findAll(
+    @QueryParams() common: CommonQueryDto<Category>,
+    @QueryParams() where: QueryCategoryDto
+  ) {
+    return await this.viewService.findAll(common, where);
   }
 
   @CategoryResource.Save()
-  save() {
-    return 'save';
-  }
-
-  @CategoryResource.SetRelation()
-  setRelation() {
-    return 'setRelation';
-  }
-
-  @CategoryResource.UnsetRelation()
-  unsetRelation() {
-    return 'unsetRelation';
+  save(@BodyParams() dto: CreateCategoryDto) {
+    return this.service.save(dto);
   }
 
   @CategoryResource.Update()
-  update() {
-    return 'update';
+  async update(@IDParam() id: number, @BodyParams() dto: UpdateCategoryDto) {
+    return await this.service.update(id, dto);
+  }
+
+  @CategoryResource.AddRelation()
+  async addRelation(@Params() relation: AddRelationDto) {
+    return await this.service.addRelation(relation);
+  }
+
+  @CategoryResource.RemoveRelation()
+  async removeRelation(@Params() relation: RemoveRelationDto) {
+    return await this.service.removeRelation(relation);
+  }
+
+  @CategoryResource.SetRelation()
+  async setRelation(@Params() relation: SetRelationDto) {
+    return await this.service.setRelation(relation);
+  }
+  @CategoryResource.UnsetRelation()
+  async unsetsetRelation(@Params() relation: UnsetRelationDto) {
+    return await this.service.unsetRelation(relation);
+  }
+
+  @CategoryResource.Count()
+  async count(@QueryParams() query: QueryCategoryDto) {
+    return await this.service.count(query);
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@rline/model",
-  "version": "2.17.0",
+  "version": "3.0.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -14,7 +14,7 @@
     "url": "https://rbrightline.github.io"
   },
   "dependencies": {
-    "@rline/type": "2.16.0",
+    "@rline/type": "3.0.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",

@@ -1,3 +1,3 @@
-export type Active = {
-  active: boolean;
+export type Active<T = boolean> = {
+  active: T;
 };

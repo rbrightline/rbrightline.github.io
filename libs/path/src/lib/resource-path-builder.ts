@@ -5,13 +5,15 @@ export type ResourcePathBuilderOptions = {
 };
 
 export class ResourcePathBuilder {
+  protected readonly options: ResourcePathBuilderOptions;
   readonly SINGULAR: string;
   readonly PLURAL: string;
   readonly ID: string;
   readonly RELATION: string;
   readonly RELATION_ID: string;
 
-  constructor(protected readonly options: ResourcePathBuilderOptions) {
+  constructor(options: ResourcePathBuilderOptions) {
+    this.options = options;
     const singular = options.singular;
     const plural = options.plural || singular + 's';
     const prefix = options.prefix;

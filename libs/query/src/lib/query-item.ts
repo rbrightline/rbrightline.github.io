@@ -3,7 +3,7 @@ import { QueryOperator } from './operator';
 /**
  * Single query item object
  */
-export class QueryItem {
+export class QueryItem<T = unknown> {
   /**
    * Query operator {@link QueryOperator}
    */
@@ -12,5 +12,5 @@ export class QueryItem {
   /**
    * Query search string
    */
-  value: string;
+  value: T;
 }

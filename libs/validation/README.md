@@ -4,11 +4,14 @@
 
 ### Summary
 
-Input validation decorators.
+Input validation decorator.
 
 ### Examples
 
 ```typescript
+
+import { validateSync, plaintoInstance} from '@rline/validation';
+
 class TargetClass {}
 
 class Sample {
@@ -27,6 +30,12 @@ class Sample {
   @Validation({ type: 'array', items: { type: 'string' } })
   arr: string[];
 }
+
+
+const value = plainToInstance({...});
+const errors = validateSync(value);
+
+
 ```
 
 ### Release Notes

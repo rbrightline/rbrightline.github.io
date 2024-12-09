@@ -6,6 +6,8 @@
 
 ### Summary
 
+Types used across the workspace
+
 ### Examples
 
 ### Doc

@@ -1,6 +1,16 @@
 export type AddRelation = {
+  /**
+   * Entity id
+   */
   id: number;
+  /**
+   * Relation name
+   */
   rn: string;
+
+  /**
+   * Relation id
+   */
   rid: number;
 };
 

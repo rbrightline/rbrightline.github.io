@@ -25,7 +25,10 @@ export type RestResourceBuilderOptions = {
 };
 
 export class RestResourceBuilder {
-  constructor(protected readonly options: RestResourceBuilderOptions) {}
+  protected readonly options: RestResourceBuilderOptions;
+  constructor(options: RestResourceBuilderOptions) {
+    this.options = options;
+  }
 
   protected Common(): MethodDecorator {
     return (t, p, d) => {

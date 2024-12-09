@@ -1,6 +1,6 @@
 {
   "name": "@rline/orm",
-  "version": "2.17.0",
+  "version": "3.0.12",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -20,10 +20,12 @@
     "typeorm": "^0.3.20"
   },
   "dependencies": {
-    "@rline/property": "2.17.0",
-    "@rline/type": "2.17.0",
-    "@rline/validation": "2.17.0",
-    "@swc/helpers": "~0.5.11"
+    "@rline/property": "3.0.0",
+    "@rline/query": "3.0.0",
+    "@rline/type": "3.0.0",
+    "@swc/helpers": "~0.5.11",
+    "better-sqlite3": "^11.7.0",
+    "pg": "^8.13.1"
   },
   "type": "commonjs",
   "main": "./dist/src/index.js",
@@ -59,7 +61,7 @@
     "name": "orm"
   },
   "devDependencies": {
-    "better-sqlite3": "^11.6.0",
-    "pg": "^8.13.1"
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/pg": "^8.11.10"
   }
 }
