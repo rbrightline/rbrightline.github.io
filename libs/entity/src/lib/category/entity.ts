@@ -39,8 +39,7 @@ export class CategoryView extends IDView implements CategoryViewEntity {
 
 @Dto()
 export class CreateCategoryDto implements CreateCategoryModel {
-  @Property({ type: 'string', required: true, format: 'short' })
-  name: string;
+  @Property({ type: 'string', required: true, format: 'short' }) name: string;
 }
 
 @Dto()

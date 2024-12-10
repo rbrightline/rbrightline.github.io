@@ -1,0 +1,1052 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@rline/rest documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">@rline/rest documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Classes</li>
+  <li class="breadcrumb-item" >RestResourceBuilder</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/resource.ts</code>
+        </p>
+
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#options" >options</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#AddRelation" >AddRelation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#Common" >Common</a>
+                            </li>
+                            <li>
+                                <a href="#Controller" >Controller</a>
+                            </li>
+                            <li>
+                                <a href="#Count" >Count</a>
+                            </li>
+                            <li>
+                                <a href="#Delete" >Delete</a>
+                            </li>
+                            <li>
+                                <a href="#FindAll" >FindAll</a>
+                            </li>
+                            <li>
+                                <a href="#FindOneById" >FindOneById</a>
+                            </li>
+                            <li>
+                                <a href="#Metadata" >Metadata</a>
+                            </li>
+                            <li>
+                                <a href="#RemoveRelation" >RemoveRelation</a>
+                            </li>
+                            <li>
+                                <a href="#Save" >Save</a>
+                            </li>
+                            <li>
+                                <a href="#SetRelation" >SetRelation</a>
+                            </li>
+                            <li>
+                                <a href="#UnsetRelation" >UnsetRelation</a>
+                            </li>
+                            <li>
+                                <a href="#Update" >Update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(options: <a href="../undefineds/RestResourceBuilderOptions.html" target="_self">RestResourceBuilderOptions</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/resource.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>options</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/typealiases.html#RestResourceBuilderOptions" target="_self" >RestResourceBuilderOptions</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="options"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>options</b></span>
+                        <a href="#options"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#RestResourceBuilderOptions" target="_self" >RestResourceBuilderOptions</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/resource.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="AddRelation"></a>
+                    <span class="name">
+                        <span ><b>AddRelation</b></span>
+                        <a href="#AddRelation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>AddRelation()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="132"
+                                    class="link-to-prism">src/lib/resource.ts:132</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Common"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>Common</b></span>
+                        <a href="#Common"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>Common()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="33"
+                                    class="link-to-prism">src/lib/resource.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Controller"></a>
+                    <span class="name">
+                        <span ><b>Controller</b></span>
+                        <a href="#Controller"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Controller()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/lib/resource.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>ClassDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Count"></a>
+                    <span class="name">
+                        <span ><b>Count</b></span>
+                        <a href="#Count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Count()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="110"
+                                    class="link-to-prism">src/lib/resource.ts:110</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Delete"></a>
+                    <span class="name">
+                        <span ><b>Delete</b></span>
+                        <a href="#Delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Delete()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="98"
+                                    class="link-to-prism">src/lib/resource.ts:98</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="FindAll"></a>
+                    <span class="name">
+                        <span ><b>FindAll</b></span>
+                        <a href="#FindAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>FindAll()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="50"
+                                    class="link-to-prism">src/lib/resource.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="FindOneById"></a>
+                    <span class="name">
+                        <span ><b>FindOneById</b></span>
+                        <a href="#FindOneById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>FindOneById()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/lib/resource.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Metadata"></a>
+                    <span class="name">
+                        <span ><b>Metadata</b></span>
+                        <a href="#Metadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Metadata()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/lib/resource.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RemoveRelation"></a>
+                    <span class="name">
+                        <span ><b>RemoveRelation</b></span>
+                        <a href="#RemoveRelation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>RemoveRelation()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="143"
+                                    class="link-to-prism">src/lib/resource.ts:143</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Save"></a>
+                    <span class="name">
+                        <span ><b>Save</b></span>
+                        <a href="#Save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Save()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="73"
+                                    class="link-to-prism">src/lib/resource.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SetRelation"></a>
+                    <span class="name">
+                        <span ><b>SetRelation</b></span>
+                        <a href="#SetRelation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>SetRelation()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="154"
+                                    class="link-to-prism">src/lib/resource.ts:154</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UnsetRelation"></a>
+                    <span class="name">
+                        <span ><b>UnsetRelation</b></span>
+                        <a href="#UnsetRelation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>UnsetRelation()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="166"
+                                    class="link-to-prism">src/lib/resource.ts:166</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Update"></a>
+                    <span class="name">
+                        <span ><b>Update</b></span>
+                        <a href="#Update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Update()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="85"
+                                    class="link-to-prism">src/lib/resource.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>MethodDecorator</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ResourcePathBuilder } from &#x27;@rline/path&#x27;;
+import { Controller, Delete, Get, Options, Post, Put } from &#x27;@nestjs/common&#x27;;
+import {
+  ApiNotFoundResponse,
+  ApiInternalServerErrorResponse,
+  ApiUnprocessableEntityResponse,
+  ApiUnauthorizedResponse,
+  ApiOkResponse,
+  ApiCreatedResponse,
+  ApiBadRequestResponse,
+  ApiBearerAuth,
+  ApiTags,
+  ApiOperation,
+} from &#x27;@nestjs/swagger&#x27;;
+import { ResourceName } from &#x27;./meta/resource&#x27;;
+import {
+  DeletedOperation,
+  ReadOperation,
+  UpdateOperation,
+  WriteOperation,
+} from &#x27;./meta/operation&#x27;;
+
+export type RestResourceBuilderOptions &#x3D; {
+  path: ResourcePathBuilder;
+};
+
+export class RestResourceBuilder {
+  protected readonly options: RestResourceBuilderOptions;
+  constructor(options: RestResourceBuilderOptions) {
+    this.options &#x3D; options;
+  }
+
+  protected Common(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      ApiBadRequestResponse()(t, p, d);
+      ApiInternalServerErrorResponse()(t, p, d);
+      ApiUnauthorizedResponse()(t, p, d);
+    };
+  }
+
+  Controller(): ClassDecorator {
+    return (t) &#x3D;&gt; {
+      Controller()(t);
+      ApiTags(t.name + &#x27;Controller&#x27;)(t);
+      ApiBearerAuth()(t);
+      ResourceName(t.name);
+    };
+  }
+
+  FindAll(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      ReadOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;FindAll&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+
+      Get(this.options.path.PLURAL)(t, p, d);
+    };
+  }
+
+  FindOneById(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      ReadOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;FindOneById&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Get(this.options.path.ID)(t, p, d);
+    };
+  }
+
+  Save(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      WriteOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;Save&#x27; })(t, p, d);
+      ApiCreatedResponse()(t, p, d);
+      ApiUnprocessableEntityResponse()(t, p, d);
+
+      Post(this.options.path.SINGULAR)(t, p, d);
+    };
+  }
+
+  Update(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      UpdateOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;Update&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+      ApiUnprocessableEntityResponse()(t, p, d);
+
+      Put(this.options.path.ID)(t, p, d);
+    };
+  }
+
+  Delete(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      DeletedOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;Delete&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Delete(this.options.path.ID)(t, p, d);
+    };
+  }
+
+  Count(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      ReadOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;Count&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+
+      Get(this.options.path.SINGULAR)(t, p, d);
+    };
+  }
+
+  Metadata(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      ReadOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;Metadata&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+
+      Options(this.options.path.SINGULAR)(t, p, d);
+    };
+  }
+
+  AddRelation(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      UpdateOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;AddRelation&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Put(this.options.path.RELATION_ID)(t, p, d);
+    };
+  }
+  RemoveRelation(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      UpdateOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;RemoveRelation&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Delete(this.options.path.RELATION_ID)(t, p, d);
+    };
+  }
+  SetRelation(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      WriteOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;SetRelation&#x27; })(t, p, d);
+      ApiCreatedResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Post(this.options.path.RELATION)(t, p, d);
+    };
+  }
+
+  UnsetRelation(): MethodDecorator {
+    return (t, p, d) &#x3D;&gt; {
+      this.Common()(t, p, d);
+      DeletedOperation()(t, p, d);
+      ApiOperation({ summary: &#x27;UnsetRelation&#x27; })(t, p, d);
+      ApiOkResponse()(t, p, d);
+      ApiNotFoundResponse()(t, p, d);
+
+      Delete(this.options.path.RELATION)(t, p, d);
+    };
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'RestResourceBuilder.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

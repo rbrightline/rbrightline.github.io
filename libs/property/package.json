@@ -1,6 +1,6 @@
 {
   "name": "@rline/property",
-  "version": "3.0.0",
+  "version": "3.4.0",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -13,12 +13,10 @@
     "email": "robert.brightline@gmail.com",
     "url": "https://rbrightline.github.io"
   },
-  "optionalDependencies": {
-    "@nestjs/swagger": "^8.0.7"
-  },
   "dependencies": {
-    "@rline/type": "3.0.0",
-    "@rline/validation": "3.0.0",
+    "@nestjs/swagger": "^8.0.7",
+    "@rline/type": "3.4.0",
+    "@rline/validation": "3.4.0",
     "@swc/helpers": "~0.5.11"
   },
   "type": "commonjs",

@@ -90,14 +90,6 @@ export function toApiProeprtyOptions(
 
 export function ApiProperty(options: PropertyOptions): PropertyDecorator {
   return (t, p) => {
-    const type = options.type;
-
-    switch (type) {
-      case 'array':
-        __ApiProperty({
-          type: 'array',
-        })(t, p);
-        break;
-    }
+    __ApiProperty(toApiProeprtyOptions(options))(t, p);
   };
 }

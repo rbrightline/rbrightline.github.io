@@ -23,3 +23,4 @@ All libraries used accross the rline projects
 - [@rline/type] (https://rbrightline.github.io/docs/type)
 - [@rline/util] (https://rbrightline.github.io/docs/util)
 - [@rline/validation] (https://rbrightline.github.io/docs/validation)
+- [@rline/json] (https://rbrightline.github.io/docs/json)

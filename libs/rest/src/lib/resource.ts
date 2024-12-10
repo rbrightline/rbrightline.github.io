@@ -51,9 +51,9 @@ export class RestResourceBuilder {
     return (t, p, d) => {
       this.Common()(t, p, d);
       ReadOperation()(t, p, d);
-      ApiOperation({ summary: 'FindAll' })(t, p, d);
+      ApiOperation({ summary: 'Find all' })(t, p, d);
       ApiOkResponse()(t, p, d);
-
+      ApiUnprocessableEntityResponse()(t, p, d);
       Get(this.options.path.PLURAL)(t, p, d);
     };
   }
@@ -62,10 +62,9 @@ export class RestResourceBuilder {
     return (t, p, d) => {
       this.Common()(t, p, d);
       ReadOperation()(t, p, d);
-      ApiOperation({ summary: 'FindOneById' })(t, p, d);
+      ApiOperation({ summary: 'Find one by id' })(t, p, d);
       ApiOkResponse()(t, p, d);
       ApiNotFoundResponse()(t, p, d);
-
       Get(this.options.path.ID)(t, p, d);
     };
   }
@@ -133,33 +132,35 @@ export class RestResourceBuilder {
     return (t, p, d) => {
       this.Common()(t, p, d);
       UpdateOperation()(t, p, d);
-      ApiOperation({ summary: 'AddRelation' })(t, p, d);
+      ApiOperation({ summary: 'Add relation' })(t, p, d);
       ApiOkResponse()(t, p, d);
       ApiNotFoundResponse()(t, p, d);
 
       Put(this.options.path.RELATION_ID)(t, p, d);
     };
   }
+
   RemoveRelation(): MethodDecorator {
     return (t, p, d) => {
       this.Common()(t, p, d);
       UpdateOperation()(t, p, d);
-      ApiOperation({ summary: 'RemoveRelation' })(t, p, d);
+      ApiOperation({ summary: 'Remove relation' })(t, p, d);
       ApiOkResponse()(t, p, d);
       ApiNotFoundResponse()(t, p, d);
 
       Delete(this.options.path.RELATION_ID)(t, p, d);
     };
   }
+
   SetRelation(): MethodDecorator {
     return (t, p, d) => {
       this.Common()(t, p, d);
       WriteOperation()(t, p, d);
-      ApiOperation({ summary: 'SetRelation' })(t, p, d);
+      ApiOperation({ summary: 'Set relation' })(t, p, d);
       ApiCreatedResponse()(t, p, d);
       ApiNotFoundResponse()(t, p, d);
 
-      Post(this.options.path.RELATION)(t, p, d);
+      Post(this.options.path.RELATION_ID)(t, p, d);
     };
   }
 
@@ -167,7 +168,7 @@ export class RestResourceBuilder {
     return (t, p, d) => {
       this.Common()(t, p, d);
       DeletedOperation()(t, p, d);
-      ApiOperation({ summary: 'UnsetRelation' })(t, p, d);
+      ApiOperation({ summary: 'Unset relation' })(t, p, d);
       ApiOkResponse()(t, p, d);
       ApiNotFoundResponse()(t, p, d);
 

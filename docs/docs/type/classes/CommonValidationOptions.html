@@ -150,10 +150,10 @@
                                 <a href="#exclude" >exclude</a>
                             </li>
                             <li>
-                                <a href="#isArray" >isArray</a>
+                                <a href="#isString" >isString</a>
                             </li>
                             <li>
-                                <a href="#isString" >isString</a>
+                                <a href="#notSameAs" >notSameAs</a>
                             </li>
                             <li>
                                 <a href="#notValidate" >notValidate</a>
@@ -202,45 +202,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/validation/common.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/validation/common.ts:28</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>define the property is excluded or not.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="isArray"></a>
-                    <span class="name">
-                        <span ><b>isArray</b></span>
-                        <a href="#isArray"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/lib/validation/common.ts:8</a></div>
-                        </td>
-                    </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>define the value is <code>array</code> or not.</p>
 </div>
                 </td>
             </tr>
@@ -266,13 +234,45 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/lib/validation/common.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/lib/validation/common.ts:18</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>define the property is <code>passed as string value</code>. This is for properties that is provided as string but used as different type, for example, provided string and used as number. If <code>true</code>, string value is transformed into the provided property type before validation.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="notSameAs"></a>
+                    <span class="name">
+                        <span ><b>notSameAs</b></span>
+                        <a href="#notSameAs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/validation/common.ts:33</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>define the property that this property&#39;s value should not be same as that property&#39;s value</p>
 </div>
                 </td>
             </tr>
@@ -298,7 +298,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/validation/common.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/lib/validation/common.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -330,7 +330,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/lib/validation/common.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/lib/validation/common.ts:8</a></div>
                         </td>
                     </tr>
 
@@ -362,7 +362,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/lib/validation/common.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/lib/validation/common.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -389,11 +389,6 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class CommonValidationOptions {
   /**
-   * define the value is &#x60;array&#x60; or not.
-   */
-  isArray: boolean;
-
-  /**
    * define the property is &#x60;required&#x60; or not.
    */
   required: boolean;
@@ -417,6 +412,11 @@
    * define the property is excluded or not.
    */
   exclude: boolean;
+
+  /**
+   * define the property that this property&#x27;s value should not be same as that property&#x27;s value
+   */
+  notSameAs: string;
 }
 </code></pre>
     </div>

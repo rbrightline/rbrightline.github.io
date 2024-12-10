@@ -82,10 +82,38 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1>validation</h1>
+<h3>Install</h3>
+<p><code>pnpm add @rline/validation</code></p>
 <h3>Summary</h3>
+<p>Input validation decorator.</p>
 <h3>Examples</h3>
-<h3>Release Notes</h3>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-typescript">
+import { validateSync, plaintoInstance} from &#39;&#64;rline/validation&#39;;
+
+class TargetClass {}
+
+class Sample {
+  &#64;Validation({ type: &#39;string&#39;, minLength: 3, maxLength: 30 })
+  str: string;
+
+  &#64;Validation({ type: &#39;number&#39;, minimum: 0, maximum: 100 })
+  num: string;
+
+  &#64;Validation({ type: &#39;date&#39;, future: true })
+  date: string;
+
+  &#64;Validation({ type: &#39;object&#39;, target: () =&gt; TargetClass })
+  obj: string;
+
+  &#64;Validation({ type: &#39;array&#39;, items: { type: &#39;string&#39; } })
+  arr: string[];
+}
+
+
+const value = plainToInstance({...});
+const errors = validateSync(value);
+
+</code></pre></div><h3>Release Notes</h3>
 
 
 

@@ -1,5 +1,5 @@
 import { QueryPropertyOptions } from '@rline/type';
-import { Transform } from '@rline/property';
+import { ApiProperty, Transform } from '@rline/property';
 import { isQueryString, parseQueryItem } from '@rline/query';
 import { createQueryOperator } from '../query/create-query-operator';
 import { parseQueryValue } from '../query/parse-query-value';
@@ -8,6 +8,7 @@ export function QueryProperty(
   options: QueryPropertyOptions
 ): PropertyDecorator {
   return (t, p) => {
+    ApiProperty(options)(t, p);
     Transform(({ value: rawValue }: any) => {
       if (isQueryString(rawValue)) {
         const queryItem = parseQueryItem<string>(rawValue);
