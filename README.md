@@ -1,2 +1,5 @@
 # rbrightline.github.io
-![Logo](public/logo.png)
+
+<div align="center">
+  <img src="public/logo.png" alt="Logo" width="200"/>
+</div>
