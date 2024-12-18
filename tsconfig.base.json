@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rline/core": ["libs/core/src/index.ts"]
+      "@rline/boot": ["libs/boot/src/index.ts"],
+      "@rline/core": ["libs/core/src/index.ts"],
+      "@rline/entity": ["libs/entity/src/index.ts"],
+      "@rline/query": ["libs/query/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
