@@ -17,8 +17,10 @@
     "paths": {
       "@rline/boot": ["libs/boot/src/index.ts"],
       "@rline/core": ["libs/core/src/index.ts"],
+      "@rline/db": ["libs/db/src/index.ts"],
       "@rline/entity": ["libs/entity/src/index.ts"],
-      "@rline/query": ["libs/query/src/index.ts"]
+      "@rline/query": ["libs/query/src/index.ts"],
+      "@rline/type": ["libs/type/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

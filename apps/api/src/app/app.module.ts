@@ -1,9 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ScheduleModule } from '@nestjs/schedule';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { DatasourceFactory, FallbackModule, TodoModule } from '@rline/boot';
+import { ScheduleModule } from '@nestjs/schedule';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { FallbackModule } from '@rline/boot';
+import { DatasourceFactory } from '@rline/db';
+import { CronService } from './cron.service';
 
+// [ ]  add bull module to support workers.
+// [ ]  create internal operation logger. Create operation entitty that track crud oprations and changing data.
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -13,8 +17,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       inject: [ConfigService],
       useClass: DatasourceFactory,
     }),
-    TodoModule,
     FallbackModule,
   ],
+  providers: [CronService],
 })
 export class AppModule {}

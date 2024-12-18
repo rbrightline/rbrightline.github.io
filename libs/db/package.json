@@ -1,0 +1,19 @@
+{
+  "name": "@rline/db",
+  "version": "0.0.1",
+  "dependencies": {
+    "@swc/helpers": "~0.5.11"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "author": {
+    "name": "Robert Brightline",
+    "email": "robert.brightline@gmail.com",
+    "url": "https://rbrightline.github.io"
+  }
+}

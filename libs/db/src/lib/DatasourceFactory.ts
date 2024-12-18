@@ -15,9 +15,6 @@ export class DatasourceFactory implements TypeOrmOptionsFactory {
       username,
       password,
       autoLoadEntities: true,
-      subscribers: [],
-      synchronize: true,
-      dropSchema: true,
     };
   }
 }

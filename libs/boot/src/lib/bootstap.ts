@@ -1,8 +1,9 @@
 import { Logger, Type } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import helmet from 'helmet';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import helmet from 'helmet';
+import { InputValiationPipe } from './input-validation.pipe';
 
 export async function bootstrap(appModule: Type) {
   const app = await NestFactory.create(appModule, {});
@@ -22,6 +23,11 @@ export async function bootstrap(appModule: Type) {
   app.enableCors({ origin: '*' });
   app.use(helmet());
 
+  // Global pipes
+  app.useGlobalPipes(InputValiationPipe);
+
+  app.useGlobalInterceptors();
+
   const swaggerConfig = new DocumentBuilder()
     .setTitle(APP_NAME)
     .setDescription(APP_DESCRIPTION)
@@ -34,6 +40,6 @@ export async function bootstrap(appModule: Type) {
 
   await app.listen(PORT, () => {
     const log = `🚀 [ ${APP_NAME} ] is running on: http://${DOMAIN}:${PORT}/${PREFIX}`;
-    Logger.log(log);
+    Logger.log(log, 'Bootstap');
   });
 }

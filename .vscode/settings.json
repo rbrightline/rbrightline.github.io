@@ -1,5 +1,12 @@
 {
     "files.associations": {
-        ".env": "yaml"
+        ".environment": "yaml",
+        ".env": "yaml",
+        ".conf": "yaml",
+        ".config": "yaml",
+    },
+    "todo-tree.tree.showBadges": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
     }
 }
