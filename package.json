@@ -3,7 +3,13 @@
   "description": "Brightline Software",
   "version": "0.0.0",
   "license": "Commercial-B33",
-  "scripts": {},
+  "scripts": {
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
+    "mig:new": "npm run typeorm -- migration:create",
+    "mig:gen": "npm run typeorm -- migration:generate -d ./migrations/data-source.ts",
+    "mig:run": "npm run typeorm -- migration:run  -d ./migrations/data-source.ts",
+    "mig:rev": "npm run typeorm -- migration:revert -d ./migrations/data-source.ts"
+  },
   "private": true,
   "publishConfig": {
     "access": "public",
@@ -23,6 +29,8 @@
     "@nestjs/schedule": "^4.1.2",
     "@nestjs/swagger": "^8.1.0",
     "@nestjs/typeorm": "^10.0.2",
+    "@rline/db": "^4.0.0",
+    "@rline/type": "^4.0.0",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "better-sqlite3": "^11.7.0",
@@ -70,6 +78,7 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
+    "typeorm-ts-node-commonjs": "^0.3.20",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.13.0",
     "verdaccio": "^5.0.4",

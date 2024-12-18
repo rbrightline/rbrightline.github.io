@@ -15,12 +15,16 @@
   "targets": {
     "build": {
       "executor": "@nx/js:swc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/entity",
         "main": "libs/entity/src/index.ts",
         "tsConfig": "libs/entity/tsconfig.lib.json",
-        "assets": ["libs/entity/*.md"]
+        "assets": [
+          "libs/entity/*.md"
+        ]
       }
     },
     "nx-release-publish": {
@@ -30,7 +34,9 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
       "options": {
         "reportsDirectory": "../../coverage/libs/entity"
       }
