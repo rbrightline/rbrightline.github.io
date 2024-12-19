@@ -1,0 +1,68 @@
+{
+    "class entity [ TypeOrm ]": {
+        "prefix": "class entity [ TypeOrm ]",
+        "body": [
+            "import { Entity, Column ${2:,ManyToMany, ManyToOne, JoinTable, JoinColumn} } from 'typeorm';",
+            "import { BaseEntity } from '@rline/db';",
+            "import { str, num, date, bool, value } from '@rline/type';",
+            "import { ApiProperty } from '@nestjs/swagger';",
+            "",
+            "",
+            "@Entity()",
+            "export class $1 extends BaseEntity<$1> {",
+            "\t$0",
+            "}"
+        ],
+        "scope": "typescript"
+    },
+    "string column [ TypeOrm ]": {
+        "prefix": "string column",
+        "body": [
+            "@ApiProperty({ type: 'string' ${2:,required: false} ${3:,nullable: true} })",
+            "@Expose()",
+            "@Column({ type: 'varchar' ${4:,nullable: true} })",
+            "$1 = str();",
+        ],
+        "scope": "typescript"
+    },
+    "number column [ TypeOrm ]": {
+        "prefix": "number column",
+        "body": [
+            "@ApiProperty({ type: 'number' ${2:,required: false} ${3:,nullable: true} })",
+            "@Expose()",
+            "@Column({ type: 'numeric' ${4:,nullable: true} })",
+            "$1 = num();",
+        ],
+        "scope": "typescript"
+    },
+    "integer column [ TypeOrm ]": {
+        "prefix": "integer column",
+        "body": [
+            "@ApiProperty({ type: 'number' ${2:,required: false} ${3:,nullable: true} })",
+            "@Expose()",
+            "@Column({ type: 'integer' ${4:,nullable: true} })",
+            "$1 = num();",
+        ],
+        "scope": "typescript"
+    },
+    "boolean column [ TypeOrm ]": {
+        "prefix": "boolean column",
+        "body": [
+            "@ApiProperty({ type: 'boolean' ${2:,required: false} ${3:,nullable: true} })",
+            "@Expose()",
+            "@Column({ type: 'boolean' ${4:,nullable: true} })",
+            "$1 = bool();",
+        ],
+        "scope": "typescript"
+    },
+    "date column [ TypeOrm ]": {
+        "prefix": "date column",
+        "body": [
+            "@ApiProperty({ type: 'string', format:'date-time' ${2:,required: false} ${3:,nullable: true} })",
+            "@Expose()",
+            "@Column({ type: 'timestamp' ${4:,nullable: true} })",
+            "$1 = date();",
+        ],
+        "scope": "typescript"
+    },
+}

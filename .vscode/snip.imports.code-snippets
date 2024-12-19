@@ -1,0 +1,7 @@
+{
+    "import local": {
+        "prefix": "import local",
+        "body": "import { $2 } from './$1';\n$0",
+        "scope": "typescript"
+    }
+}

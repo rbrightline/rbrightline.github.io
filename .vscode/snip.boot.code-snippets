@@ -1,0 +1,40 @@
+{
+    "app config": {
+        "prefix": "app config",
+        "body": [
+            "const C = app.get(ConfigService);",
+            "",
+            "const APP_NAME = C.getOrThrow('APP_NAME');",
+            "const VERSION = C.getOrThrow('VERSION');",
+            "const APP_DESCRIPTION = C.getOrThrow('APP_DESCRIPTION');",
+            "const PREFIX = C.getOrThrow('PREFIX');",
+            "const PORT = C.getOrThrow('PORT');",
+        ],
+        "scope": "typescript"
+    },
+    "app env file": {
+        "prefix": "app env file",
+        "body": [
+            "# Dev envy",
+            "",
+            "# General",
+            "APP_NAME: Application",
+            "APP_DESCRIPTION: Application",
+            "VERSION: 0.0.1",
+            "",
+            "# Dev",
+            "DB_NAME: testdb",
+            "DB_USERNAME: testuser",
+            "DB_PASSWORD: password",
+            "",
+            "# Server",
+            "DOMAIN: localhost",
+            "PREFIX: api",
+            "PORT: 3000",
+        ],
+        "scope": [
+            "plaintext",
+            "yaml"
+        ]
+    }
+}

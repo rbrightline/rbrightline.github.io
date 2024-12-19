@@ -1,0 +1,12 @@
+{
+    "export all": {
+        "prefix": "export all",
+        "body": "// @index(['./**/*.ts', '!./**/*.{spec,test,story,stories,ignore}.ts', '!./**/_*'], f => `export * from '${f.path}'`)",
+        "scope": "typescript"
+    },
+    "add todo": {
+        "prefix": "add todo",
+        "body": "// [${1|x |}] $2",
+        "scope": "typescript"
+    }
+}

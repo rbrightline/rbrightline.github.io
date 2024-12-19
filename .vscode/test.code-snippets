@@ -1,0 +1,11 @@
+{
+    "it should [ Test ]": {
+        "prefix": "it should [ Test ]",
+        "body": [
+            "it('$1', async () => {",
+            "\texpect($2).toBe($3);",
+            "});",
+        ],
+        "scope": "typescript"
+    }
+}

@@ -46,7 +46,8 @@
       "exclude": [
         "apps/rbrightline.github.io-e2e/**/*",
         "apps/app-e2e/**/*",
-        "apps/api-e2e/**/*"
+        "apps/api-e2e/**/*",
+        "apps/redis-e2e/**/*"
       ]
     },
     {

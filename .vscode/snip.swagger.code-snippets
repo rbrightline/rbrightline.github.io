@@ -1,0 +1,17 @@
+{
+    "swagger configuration": {
+        "prefix": "swagger configuration",
+        "body": [
+            "  const swaggerConfig = new DocumentBuilder()",
+            "  .setTitle(APP_NAME)",
+            "  .setDescription(APP_DESCRIPTION)",
+            "  .addBearerAuth()",
+            "  .setVersion(VERSION)",
+            "  .build();",
+            "",
+            "const config = SwaggerModule.createDocument(app, swaggerConfig, {});",
+            "SwaggerModule.setup(PREFIX, app, config);",
+        ],
+        "scope": "typescript"
+    }
+}

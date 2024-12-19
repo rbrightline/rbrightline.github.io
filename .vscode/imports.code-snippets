@@ -1,0 +1,47 @@
+{
+    "common module [ NestJS ]": {
+        "prefix": "common module [ NestJS ]",
+        "body": "import { Module } from '@nestjs/common';",
+        "scope": "typescript"
+    },
+    "config module [ NestJS ]": {
+        "prefix": "config module [ NestJS ]",
+        "body": "import { ConfigModule, ConfigService } from '@nestjs/config';",
+        "scope": "typescript"
+    },
+    "schedule module [ NestJS ]": {
+        "prefix": "schedule module [ NestJS ]",
+        "body": "import { ScheduleModule } from '@nestjs/schedule';",
+        "scope": "typescript"
+    },
+    "typeorm module [ NestJS ]": {
+        "prefix": "typeorm module [ NestJS ]",
+        "body": "import { TypeOrmModule } from '@nestjs/typeorm';",
+        "scope": "typescript"
+    },
+    "bull module [ NestJS ]": {
+        "prefix": "bull module [ NestJS ]",
+        "body": "import { BullModule } from '@nestjs/bull';",
+        "scope": "typescript"
+    },
+    "bullmq module [ NestJS ]": {
+        "prefix": "bullmq module [ NestJS ]",
+        "body": "import { BullModule } from '@nestjs/bullmq';",
+        "scope": "typescript"
+    },
+    "emitter module [ NestJS ]": {
+        "prefix": "emitter module [ NestJS ]",
+        "body": "import { EventEmitterModule } from '@nestjs/event-emitter';",
+        "scope": "typescript"
+    },
+    "swagger module [ NestJS ]": {
+        "prefix": "swagger module [ NestJS ]",
+        "body": "import { SwaggerModule } from '@nestjs/swagger';",
+        "scope": "typescript"
+    },
+    "testing module [ NestJS ]": {
+        "prefix": "testing module [ NestJS ]",
+        "body": "import { TestingModule } from '@nestjs/testing';",
+        "scope": "typescript"
+    },
+}
