@@ -1,6 +1,6 @@
 import { Logger, Type } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
+import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import helmet from 'helmet';
 import { InputValiationPipe } from './input-validation.pipe';
@@ -20,7 +20,12 @@ export async function bootstrap(appModule: Type) {
   app.setGlobalPrefix(PREFIX);
 
   // Security
-  app.enableCors({ origin: '*' });
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Accept, Authorization',
+  });
+
   app.use(helmet());
 
   // Global pipes
@@ -33,6 +38,7 @@ export async function bootstrap(appModule: Type) {
     .setDescription(APP_DESCRIPTION)
     .addBearerAuth()
     .setVersion(VERSION)
+
     .build();
 
   const config = SwaggerModule.createDocument(app, swaggerConfig, {});
