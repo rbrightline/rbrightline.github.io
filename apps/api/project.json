@@ -54,6 +54,9 @@
       "options": {
         "reportsDirectory": "../../coverage/apps/api"
       }
+    },
+    "migration:create": {
+      "command": "ts-node node_modules/typeorm/cli migration:create apps/api/src/database/migrations/update"
     }
   }
 }
