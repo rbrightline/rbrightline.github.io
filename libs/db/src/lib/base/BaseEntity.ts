@@ -5,10 +5,7 @@ import { IsNumber, IsOptional, IsString } from 'class-validator';
 import { Column } from 'typeorm';
 import { ActiveEntity } from './ActiveEntity';
 
-export abstract class BaseEntity<T>
-  extends ActiveEntity<T>
-  implements BaseModel
-{
+export class BaseEntity<T> extends ActiveEntity<T> implements BaseModel {
   @ApiProperty({ type: 'string', required: false, nullable: true })
   @Expose()
   @IsString()

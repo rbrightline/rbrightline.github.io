@@ -5,10 +5,7 @@ import { IsBoolean, IsOptional } from 'class-validator';
 import { Column } from 'typeorm';
 import { TimestampEntity } from './TimestampEntity';
 
-export abstract class ActiveEntity<T>
-  extends TimestampEntity<T>
-  implements ActiveModel
-{
+export class ActiveEntity<T> extends TimestampEntity<T> implements ActiveModel {
   @ApiProperty({ type: 'boolean', required: false, nullable: true })
   @Expose()
   @IsBoolean()

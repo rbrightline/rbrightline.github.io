@@ -5,7 +5,7 @@ import { IsDate, IsOptional } from 'class-validator';
 import { CreateDateColumn, DeleteDateColumn, UpdateDateColumn } from 'typeorm';
 import { IDEntity } from './IdEntity';
 
-export abstract class TimestampEntity<T>
+export class TimestampEntity<T>
   extends IDEntity<T>
   implements TimestampModel, IDModel
 {

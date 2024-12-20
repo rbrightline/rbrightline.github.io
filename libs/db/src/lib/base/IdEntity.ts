@@ -4,7 +4,7 @@ import { Expose } from 'class-transformer';
 import { IsInt, IsNotEmpty, Min } from 'class-validator';
 import { PrimaryGeneratedColumn } from 'typeorm';
 
-export abstract class IDEntity<T> extends BaseModelClass<T> implements IDModel {
+export class IDEntity<T> extends BaseModelClass<T> implements IDModel {
   @ApiProperty({ type: 'number', required: true })
   @Expose()
   @IsInt()
