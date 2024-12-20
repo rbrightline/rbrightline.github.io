@@ -2,20 +2,36 @@ import { Logger, Type } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { ConfigKey } from '@rline/type';
 import helmet from 'helmet';
 import { InputValiationPipe } from './input-validation.pipe';
 
 export async function bootstrap(appModule: Type) {
+  const logger = new Logger('Bootstrap');
+
   const app = await NestFactory.create(appModule, {});
 
   // Configurations
   const C = app.get(ConfigService);
-  const APP_NAME = C.getOrThrow('APP_NAME');
-  const VERSION = C.getOrThrow('VERSION');
-  const APP_DESCRIPTION = C.getOrThrow('APP_DESCRIPTION');
-  const PREFIX = C.getOrThrow('PREFIX');
-  const PORT = C.getOrThrow('PORT');
-  const DOMAIN = C.getOrThrow('DOMAIN');
+
+  const APP_NAME = C.get(ConfigKey.APP_NAME, 'Default app name');
+  const VERSION = C.get(ConfigKey.VERSION, '0.0.1');
+  const APP_DESCRIPTION = C.get(
+    ConfigKey.APP_DESCRIPTION,
+    'Default app description'
+  );
+  const PREFIX = C.get(ConfigKey.PREFIX, 'api');
+  const PORT = C.get(ConfigKey.PORT, '3000');
+  const DOMAIN = C.get(ConfigKey.DOMAIN, 'localhost');
+
+  console.table({
+    APP_NAME,
+    VERSION,
+    APP_DESCRIPTION,
+    PREFIX,
+    PORT,
+    DOMAIN,
+  });
 
   app.setGlobalPrefix(PREFIX);
 

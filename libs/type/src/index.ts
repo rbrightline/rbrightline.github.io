@@ -1,5 +1,6 @@
 // @index(['./**/*.ts', '!./**/*.{spec,test,story,stories,ignore}.ts'], f => `export * from '${f.path}'`)
 export * from './lib/class/base-model.class';
+export * from './lib/constant/config-key';
 export * from './lib/interface/BaseClassInterface';
 export * from './lib/interface/Cleanable';
 export * from './lib/interface/Comparable';

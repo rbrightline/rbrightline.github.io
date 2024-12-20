@@ -1,6 +1,6 @@
 {
   "name": "@rline/type",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "dependencies": {
     "@swc/helpers": "~0.5.11"
   },

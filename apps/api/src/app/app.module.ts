@@ -16,7 +16,7 @@ import { TaskProcessor } from './task.processor';
   imports: [
     BullModule.forRoot({
       connection: {
-        host: 'localhost',
+        host: '192.168.56.103',
         port: 6379,
       },
     }),
