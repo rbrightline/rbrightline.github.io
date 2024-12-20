@@ -1,0 +1,22 @@
+{
+    "name": "@rline/api",
+    "description": "Brightline Software",
+    "type": "commonjs",
+    "devDependencies": {
+        "ts-node": "10.9.1",
+        "@types/node": "^16.11.10",
+        "typescript": "4.5.2"
+    },
+    "dependencies": {
+        "typeorm": "0.3.20",
+        "reflect-metadata": "^0.1.13",
+        "pg": "^8.4.0"
+    },
+    "scripts": {
+        "typeorm": "ts-node -p tsconfig.db.json ../../node_modules/typeorm/cli",
+        "migration:generate": "npm run typeorm -- migration:generate ./src/database/migration/update -d ./src/database/options.ts",
+        "migration:run": "npm run typeorm -- migration:run  -d ./src/database/options.ts",
+        "migration:revert": "npm run typeorm -- migration:revert ./src/database/migration -d ./src/database/options.ts",
+        "cache:clear": "npm run typeorm -- cache:clear -d ./src/database/options.ts"
+    }
+}
