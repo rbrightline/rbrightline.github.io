@@ -1,4 +1,3 @@
-import { BullModule } from '@nestjs/bullmq';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
@@ -8,22 +7,9 @@ import { DatasourceFactory } from '@rline/db';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CronService } from './cron.service';
-import { TaskProcessor } from './task.processor';
 
-// [ ]  add bull module to support workers.
-// [ ]  create internal operation logger. Create operation entitty that track crud oprations and changing data.
 @Module({
   imports: [
-    BullModule.forRoot({
-      connection: {
-        host: '192.168.56.103',
-        port: 6379,
-      },
-    }),
-    BullModule.registerQueue({
-      name: 'tasks',
-    }),
-
     ConfigModule.forRoot(),
     ScheduleModule.forRoot({}),
     TypeOrmModule.forRootAsync({
@@ -33,7 +19,7 @@ import { TaskProcessor } from './task.processor';
     }),
     FallbackModule,
   ],
-  providers: [AppService, CronService, TaskProcessor],
+  providers: [AppService, CronService],
   controllers: [AppController],
 })
 export class AppModule {}

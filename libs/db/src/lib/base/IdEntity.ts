@@ -1,10 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { BaseModelClass, num } from '@rline/type';
+import { BaseModelClass, IDModel, num } from '@rline/type';
 import { Expose } from 'class-transformer';
 import { IsInt, IsNotEmpty, Min } from 'class-validator';
 import { PrimaryGeneratedColumn } from 'typeorm';
 
-export abstract class IDEntity<T> extends BaseModelClass<T> {
+export abstract class IDEntity<T> extends BaseModelClass<T> implements IDModel {
   @ApiProperty({ type: 'number', required: true })
   @Expose()
   @IsInt()
@@ -13,3 +13,5 @@ export abstract class IDEntity<T> extends BaseModelClass<T> {
   @PrimaryGeneratedColumn()
   id = num();
 }
+
+export abstract class IDQuery<T> extends BaseModelClass<T> {}

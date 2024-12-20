@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { FallbackController } from './fallback.controller';
-
-// [ ] create greeting page
+/**
+ * Fallback module provides not found pages.
+ */
 @Module({
   controllers: [FallbackController],
 })

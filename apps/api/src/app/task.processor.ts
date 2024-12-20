@@ -10,9 +10,4 @@ export class TaskProcessor extends WorkerHost {
     console.log('Processed Result:', result); // Debugging log
     return result;
   }
-
-  // @OnQueueCompleted()
-  // onComplete(job: Job<any>, result: any): void {
-  //   console.log(`Job ${job.id} completed with result:`, result); // Completion log
-  // }
 }

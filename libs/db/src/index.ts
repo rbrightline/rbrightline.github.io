@@ -4,4 +4,6 @@ export * from './lib/base/BaseEntity';
 export * from './lib/base/IdEntity';
 export * from './lib/base/TimestampEntity';
 export * from './lib/DatasourceFactory';
+export * from './lib/query/query-property.decorator';
+export * from './lib/service/entity.service';
 

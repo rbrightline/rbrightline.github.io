@@ -1,11 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { num, str } from '@rline/type';
+import { BaseModel, num, str } from '@rline/type';
 import { Expose } from 'class-transformer';
 import { IsNumber, IsOptional, IsString } from 'class-validator';
 import { Column } from 'typeorm';
 import { ActiveEntity } from './ActiveEntity';
 
-export abstract class BaseEntity<T> extends ActiveEntity<T> {
+export abstract class BaseEntity<T>
+  extends ActiveEntity<T>
+  implements BaseModel
+{
   @ApiProperty({ type: 'string', required: false, nullable: true })
   @Expose()
   @IsString()
