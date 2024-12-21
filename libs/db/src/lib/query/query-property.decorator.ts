@@ -1,30 +1,33 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { parseQueryString, QueryOperator } from '@rline/query';
-import { Transform } from 'class-transformer';
+import { Expose, Transform } from 'class-transformer';
 import { IsOptional } from 'class-validator';
 import {
-    Equal,
-    ILike,
-    LessThan,
-    LessThanOrEqual,
-    MoreThan,
-    MoreThanOrEqual,
-    Not,
+  Equal,
+  ILike,
+  LessThan,
+  LessThanOrEqual,
+  MoreThan,
+  MoreThanOrEqual,
+  Not,
 } from 'typeorm';
 
-export function QueryProperty(): PropertyDecorator {
+export function QueryProperty(keys: string[]): PropertyDecorator {
   return (t, p) => {
     ApiProperty({
       type: 'string',
       required: false,
       nullable: true,
-      format: '<operator>::<query>',
-    });
+      example: 'eq:query string',
+    })(t, p);
+
+    Expose()(t, p);
 
     IsOptional()(t, p);
 
     Transform(({ value }) => {
       const query = parseQueryString(value);
+
       if (query) {
         const operator = query.operator;
         switch (operator) {

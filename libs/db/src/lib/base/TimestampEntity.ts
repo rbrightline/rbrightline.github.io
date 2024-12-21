@@ -3,7 +3,7 @@ import { date, IDModel, TimestampModel } from '@rline/type';
 import { Expose } from 'class-transformer';
 import { IsDate, IsOptional } from 'class-validator';
 import { CreateDateColumn, DeleteDateColumn, UpdateDateColumn } from 'typeorm';
-import { IDEntity } from './IdEntity';
+import { IDEntity } from './IDEntity';
 
 export class TimestampEntity<T>
   extends IDEntity<T>
