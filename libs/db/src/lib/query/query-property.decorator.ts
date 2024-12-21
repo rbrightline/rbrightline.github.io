@@ -12,6 +12,11 @@ import {
   Not,
 } from 'typeorm';
 
+/**
+ * Property decorator for entity properties that transform query-string into typeorm find operators.
+ * @param keys
+ * @returns
+ */
 export function QueryProperty(keys: string[]): PropertyDecorator {
   return (t, p) => {
     ApiProperty({

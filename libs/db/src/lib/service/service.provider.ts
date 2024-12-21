@@ -1,12 +1,11 @@
 import { Inject, Provider, Type } from '@nestjs/common';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { EntityService } from './entity.service';
+import { EntityService } from './EntityService';
 
 export function getEntityServiceToken(entity: Type) {
   return `${entity.name}ServiceToken`;
 }
-
 
 export function provideEntityService<T extends {}>(entity: Type): Provider {
   return {

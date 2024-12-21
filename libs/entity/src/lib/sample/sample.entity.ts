@@ -6,6 +6,8 @@ import { Column, Entity } from 'typeorm';
 
 @Entity()
 export class Sample extends BaseEntity<Sample> {
+  @ApiProperty({ type: 'string' })
+  @Expose()
   @Column({ type: 'varchar', nullable: true })
   name = str();
 

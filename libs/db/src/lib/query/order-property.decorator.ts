@@ -3,6 +3,11 @@ import { parseOrderString } from '@rline/query';
 import { Expose, Transform } from 'class-transformer';
 import { IsOptional } from 'class-validator';
 
+/**
+ * Property decorator for entity properties that transform query-string into order order object.
+ * @param keys
+ * @returns
+ */
 export function OrderProperty(keys: string[]): PropertyDecorator {
   return (t, p) => {
     ApiProperty({ type: 'string', example: 'id:ASC' })(t, p);

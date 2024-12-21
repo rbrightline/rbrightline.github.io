@@ -21,3 +21,7 @@ export function bool(defaultValue?: Nonable<boolean>): Nullable<boolean> {
 export function date(defaultValue?: Nonable<Date>): Nullable<Date> {
   return defaultValue instanceof Date ? defaultValue : null;
 }
+
+export function arr<T>(defaultValue: Nullable<T[]>): Nullable<T[]> {
+  return defaultValue != undefined ? defaultValue : null;
+}
