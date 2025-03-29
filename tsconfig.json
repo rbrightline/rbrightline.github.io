@@ -2,12 +2,5 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": [
-    {
-      "path": "./apps/rbrightline.github.io-e2e"
-    },
-    {
-      "path": "./apps/rbrightline.github.io"
-    }
-  ]
+  "references": []
 }
